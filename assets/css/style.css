@@ -1255,11 +1255,43 @@ textarea.form-control {
 .auth-wrapper {
   min-height: 100vh;
   display: flex;
+  background: var(--clr-bg);
+}
+
+.auth-image-side {
+  display: none;
+}
+
+.auth-form-side {
+  display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--clr-bg);
-  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
-  padding-top: calc(var(--nav-h) + 2rem);
+  width: 100%;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+@media (min-width: 992px) {
+  .auth-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .auth-image-side {
+    display: block;
+    background-image: url('../images/watch-movement-detail.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .auth-image-side::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(8, 8, 14, 0.2), rgba(8, 8, 14, 0.8));
+  }
 }
 
 .auth-card {
