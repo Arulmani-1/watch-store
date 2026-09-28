@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description"
+    content="Stackly — Swiss-made luxury timepieces crafted with precision. Explore our exclusive collection of chronographs, dress watches, and tourbillons.">
+  <title>Stackly — Swiss Luxury Timepieces</title>
+
+
+  <!-- Fonts (preconnect) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Page Loader -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-logo">STACKLY</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-outline" aria-hidden="true"></div>
+
+  <!-- Toast -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Stackly home">STACK<span>LY</span></a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
+        <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
+        <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobile-nav">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <nav class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Service</a>
+      <a href="blog.html">Blog</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+    </nav>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="assets/videos/watch1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow"><span>Swiss Manufacture · Est. 1886</span></div>
+      <h1 class="hero-title" id="hero-title">
+        Time is the<br>most <em>precious</em><br>luxury
+      </h1>
+      <p class="hero-subtitle">
+        Each Stackly timepiece is an act of devotion — hundreds of hand-finished components assembled by master
+        watchmakers in the valleys of Jura.
+      </p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn-primary">
+          Explore Collection <i class="fa-regular fa-arrow-right"></i>
+        </a>
+        <a href="about.html" class="btn-ghost">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-num">138</span>
+          <span class="hero-stat-label">Years of Craft</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">847</span>
+          <span class="hero-stat-label">Parts per watch</span>
+        </div>
+        <div>
+          <span class="hero-stat-num">23</span>
+          <span class="hero-stat-label">Master craftsmen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      <span class="marquee-item">Swiss Made</span>
+      <span class="marquee-item">Tourbillon</span>
+      <span class="marquee-item">Chronograph</span>
+      <span class="marquee-item">Haute Horlogerie</span>
+      <span class="marquee-item">Sapphire Crystal</span>
+      <span class="marquee-item">Water Resistant 300m</span>
+      <span class="marquee-item">Swiss Made</span>
+      <span class="marquee-item">Tourbillon</span>
+      <span class="marquee-item">Chronograph</span>
+      <span class="marquee-item">Haute Horlogerie</span>
+      <span class="marquee-item">Sapphire Crystal</span>
+      <span class="marquee-item">Water Resistant 300m</span>
+    </div>
+  </div>
+
+  <!-- ==================== COLLECTIONS ==================== -->
+  <section aria-labelledby="collections-title">
+    <div class="section">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Collections</div>
+        <h2 class="section-title" id="collections-title">Timeless <em>Families</em></h2>
+        <div class="gold-divider"></div>
+      </div>
+    </div>
+    <div class="collections-grid" data-gsap="stagger">
+      <a href="shop.html?cat=classic" class="collection-card" aria-label="Classic collection">
+        <img src="assets/images/collection-classic.webp"
+          alt="Classic dress watch with white enamel dial on black alligator leather strap" loading="lazy" width="480"
+          height="640">
+        <div class="collection-card-overlay">
+          <span class="collection-card-tag">Heritage</span>
+          <h3 class="collection-card-name">Classique</h3>
+          <span class="collection-card-link">Discover →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=sports" class="collection-card" aria-label="Sport Diver collection">
+        <img src="assets/images/collection-sports.webp"
+          alt="Professional sport diver watch with blue dial and stainless steel bracelet" loading="lazy" width="480"
+          height="640">
+        <div class="collection-card-overlay">
+          <span class="collection-card-tag">Adventure</span>
+          <h3 class="collection-card-name">Aqua Profonde</h3>
+          <span class="collection-card-link">Discover →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=chrono" class="collection-card" aria-label="Chronograph collection">
+        <img src="assets/images/collection-chronograph.webp"
+          alt="Racing chronograph with rose gold case and tachymeter bezel on brown leather strap" loading="lazy"
+          width="480" height="640">
+        <div class="collection-card-overlay">
+          <span class="collection-card-tag">Racing</span>
+          <h3 class="collection-card-name">Chrono Sport</h3>
+          <span class="collection-card-link">Discover →</span>
+        </div>
+      </a>
+      <a href="shop.html?cat=tourbillon" class="collection-card" aria-label="Tourbillon collection">
+        <img src="assets/images/collection-tourbillon.webp"
+          alt="Luxury tourbillon watch with flying tourbillon mechanism visible through slate grey dial" loading="lazy"
+          width="480" height="640">
+        <div class="collection-card-overlay">
+          <span class="collection-card-tag">Prestige</span>
+          <h3 class="collection-card-name">Tourbillon</h3>
+          <span class="collection-card-link">Discover →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED SPLIT ==================== -->
+  <div class="featured-split" data-aos="fade-up">
+    <div class="featured-image-wrap">
+      <img src="assets/images/luxury-watch-macro.webp"
+        alt="Skeleton watch movement showing rose gold gear train and ruby jewels" loading="lazy" width="600"
+        height="750">
+    </div>
+    <div>
+      <div class="section-eyebrow">Savoir-Faire</div>
+      <h2 class="section-title">Crafted from the<br>inside <em>out</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc">Every gear, spring, and jewel is selected to tolerances measured in microns. Our movements
+        breathe with a precision that clocks can only dream of.</p>
+      <p class="section-desc mt-3">From polishing Côtes de Genève stripes to anglage on each bridge, our artisans spend
+        over 2,400 hours per complex movement.</p>
+      <a href="about.html" class="btn-text mt-4">Learn about our craft <i class="fa-regular fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- ==================== CRAFT BANNER ==================== -->
+  <div class="craft-banner" data-aos="fade">
+    <div class="craft-banner-bg">
+      <img src="assets/images/craftsmanship-workshop.webp"
+        alt="Master watchmaker assembling a luxury movement under warm workshop light" loading="lazy" width="1200"
+        height="800">
+    </div>
+    <div class="craft-banner-content">
+      <div class="section-eyebrow">The Atelier</div>
+      <h2 class="section-title" style="color:var(--clr-white)">Where <em>time</em><br>is born</h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc">Enter the workshops of Jura where silence is punctuated only by the heartbeat of
+        oscillating balance wheels.</p>
+      <a href="services.html" class="btn-primary mt-4">Book a Visit</a>
+    </div>
+  </div>
+
+  <!-- ==================== FEATURED PRODUCTS ==================== -->
+  <section aria-labelledby="featured-title">
+    <div class="section">
+      <div class="section-header centered" data-aos="fade-up">
+        <div class="section-eyebrow">Shop</div>
+        <h2 class="section-title" id="featured-title">Signature <em>Pieces</em></h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc centered">A curated selection of our most celebrated timepieces, each a masterwork of
+          horological engineering.</p>
+      </div>
+      <div class="products-grid" data-gsap="stagger">
+        <article class="product-card" data-category="classic">
+          <div class="product-card-image">
+            <img src="assets/images/collection-classic.webp" alt="Stackly Classique I — white enamel dial dress watch"
+              loading="lazy" width="480" height="640">
+            <span class="product-badge">Bestseller</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Classique</p>
+            <h3 class="product-name">Classique I</h3>
+            <p class="product-price">$12,400</p>
+            <button class="btn-add-to-cart" aria-label="Add Classique I to cart">Add to Selection</button>
+          </div>
+        </article>
+        <article class="product-card" data-category="sports">
+          <div class="product-card-image">
+            <img src="assets/images/collection-sports.webp"
+              alt="Stackly Aqua Profonde — professional diver watch with blue dial" loading="lazy" width="480"
+              height="640">
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Aqua Profonde</p>
+            <h3 class="product-name">Diver 300</h3>
+            <p class="product-price"><del>$18,600</del>$15,900</p>
+            <button class="btn-add-to-cart" aria-label="Add Diver 300 to cart">Add to Selection</button>
+          </div>
+        </article>
+        <article class="product-card" data-category="chrono">
+          <div class="product-card-image">
+            <img src="assets/images/collection-chronograph.webp"
+              alt="Stackly Chrono Sport — rose gold racing chronograph" loading="lazy" width="480" height="640">
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Chrono Sport</p>
+            <h3 class="product-name">Tachymeter RS</h3>
+            <p class="product-price">$22,800</p>
+            <button class="btn-add-to-cart" aria-label="Add Tachymeter RS to cart">Add to Selection</button>
+          </div>
+        </article>
+        <article class="product-card" data-category="tourbillon">
+          <div class="product-card-image">
+            <img src="assets/images/collection-tourbillon.webp"
+              alt="Stackly Tourbillon Prestige — platinum case with flying tourbillon" loading="lazy" width="480"
+              height="640">
+            <span class="product-badge">Limited</span>
+          </div>
+          <div class="product-card-body">
+            <p class="product-category">Tourbillon</p>
+            <h3 class="product-name">Prestige T1</h3>
+            <p class="product-price">$148,000</p>
+            <button class="btn-add-to-cart" aria-label="Add Prestige T1 to cart">Add to Selection</button>
+          </div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:3rem" data-aos="fade-up">
+        <a href="shop.html" class="btn-ghost">View Full Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section aria-labelledby="testimonials-title"
+    style="background:var(--clr-bg-alt);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+    <div class="section">
+      <div class="section-header centered" data-aos="fade-up">
+        <div class="section-eyebrow">Reviews</div>
+        <h2 class="section-title" id="testimonials-title">Words from our <em>collectors</em></h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="testimonials-grid" data-gsap="stagger">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Classique I is beyond expectation. Wearing it is like carrying a century of
+            Swiss artistry on your wrist."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JM</div>
+            <div>
+              <div class="testimonial-name">James Marchetti</div>
+              <div class="testimonial-location">Geneva, Switzerland</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Stackly's Diver 300 is the only watch I wore on my Maldives dive. Flawless at
+            250m. An engineering marvel."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SK</div>
+            <div>
+              <div class="testimonial-name">Sophia Kwan</div>
+              <div class="testimonial-location">Hong Kong</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The tourbillon T1 is my proudest acquisition. The detail inside is so refined,
+            you need a loupe to appreciate it."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AR</div>
+            <div>
+              <div class="testimonial-name">Alexandre Roux</div>
+              <div class="testimonial-location">Paris, France</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROMO BANNER ==================== -->
+  <section aria-labelledby="promo-title">
+    <div class="section" style="padding-bottom: 0;">
+      <img src="assets/images/new_watch.webp" alt="Exclusive Luxury Timepiece" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-card);" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER ==================== -->
+  <div class="newsletter-banner" data-aos="fade-up">
+    <div class="section-eyebrow" style="justify-content:center">Newsletter</div>
+    <h2 class="section-title">Stay in <em>time</em></h2>
+    <p class="section-desc centered">First access to new releases, exclusive events, and horological stories from our
+      Jura atelier.</p>
+    <form class="newsletter-form" aria-label="Newsletter subscription">
+      <label for="newsletter-email" class="sr-only">Email address</label>
+      <input type="email" id="newsletter-email" placeholder="Your email address" required autocomplete="email">
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">STACK<span>LY</span></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html?cat=classic">Classique</a></li>
+          <li><a href="shop.html?cat=sports">Aqua Profonde</a></li>
+          <li><a href="shop.html?cat=chrono">Chrono Sport</a></li>
+          <li><a href="shop.html?cat=tourbillon">Tourbillon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>

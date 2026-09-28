@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Stackly Journal — stories from the atelier, horological history, materials guides, and collector insights.">
+  <title>Journal — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div id="page-loader" aria-hidden="true"><div class="loader-logo">STACKLY</div><div class="loader-bar"></div></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">STACK<span>LY</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Service</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
+      <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
+      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav class="mobile-nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Service</a>
+    <a href="blog.html">Blog</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+</div>
+
+<div class="page-hero" style="padding-top:var(--nav-h)">
+  <div class="page-hero-bg">
+    <img src="assets/images/blog-watchmaking-history.webp" alt="Antique pocket watches and watchmaking tools from the 19th century" fetchpriority="high" width="1200" height="800">
+  </div>
+  <div class="page-hero-content">
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Journal</span></nav>
+    <h1 class="page-hero-title">The <em style="font-style:italic;color:var(--clr-gold)">Journal</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="section">
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-eyebrow">Stories</div>
+      <h2 class="section-title">From the <em>atelier</em></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="blog-grid" data-gsap="stagger">
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <img src="assets/images/blog-watchmaking-history.webp" alt="Collection of antique pocket watches and 19th century horological tools" loading="lazy" width="800" height="534">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Heritage</p>
+          <h2 class="blog-card-title">The Birth of Swiss Watchmaking — 1601 to Today</h2>
+          <p class="blog-card-excerpt">How Huguenot refugees brought their jewellery skills to Geneva and sparked a revolution in mechanical precision that echoes across the centuries.</p>
+          <div class="blog-card-meta"><span>Sept 10, 2026</span>·<span>8 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <img src="assets/images/blog-materials-guide.webp" alt="Luxury watch materials flat lay: sapphire crystal, titanium case, alligator leather strap on slate" loading="lazy" width="800" height="534">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Guide</p>
+          <h2 class="blog-card-title">Understanding Watch Materials — From Titanium to Ceramic</h2>
+          <p class="blog-card-excerpt">A collector's guide to the materials used in haute horlogerie — their properties, advantages, and why they matter to the long-term value of your timepiece.</p>
+          <div class="blog-card-meta"><span>Aug 22, 2026</span>·<span>6 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <img src="assets/images/blog-care-guide.webp" alt="Professional watchmaker cleaning a luxury diver watch with precision brush" loading="lazy" width="800" height="534">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Care</p>
+          <h2 class="blog-card-title">How to Care for a Mechanical Watch in 2026</h2>
+          <p class="blog-card-excerpt">Storage, winding, waterproofing, magnetic fields, and servicing intervals — the definitive guide to keeping your mechanical calibre running for generations.</p>
+          <div class="blog-card-meta"><span>Jul 5, 2026</span>·<span>5 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <img src="assets/images/watch-movement-detail.webp" alt="Intricate gold watch movement under macro lens showing balance wheel and ruby jewels" loading="lazy" width="600" height="600">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Technique</p>
+          <h2 class="blog-card-title">The Tourbillon Explained — Why This Complication Commands a Premium</h2>
+          <p class="blog-card-excerpt">Invented to defeat gravity's effect on pocket watches, the tourbillon remains the pinnacle of watchmaker art. We explain how it works and why it matters.</p>
+          <div class="blog-card-meta"><span>Jun 18, 2026</span>·<span>7 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <img src="assets/images/craftsmanship-workshop.webp" alt="Swiss watchmaker assembling a luxury movement under warm workshop light" loading="lazy" width="900" height="600">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Atelier</p>
+          <h2 class="blog-card-title">A Day Inside the Stackly Manufacture in Jura</h2>
+          <p class="blog-card-excerpt">We spent 12 hours inside our Le Sentier atelier, documenting every step from raw alloy to finished calibre. The silence alone is worth the journey.</p>
+          <div class="blog-card-meta"><span>May 30, 2026</span>·<span>10 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <img src="assets/images/luxury-watch-macro.webp" alt="Macro view of skeleton watch movement with rose gold gear train" loading="lazy" width="600" height="600">
+        </div>
+        <div class="blog-card-body">
+          <p class="blog-card-tag">Collecting</p>
+          <h2 class="blog-card-title">Investment Watches — Which Complications Hold Their Value</h2>
+          <p class="blog-card-excerpt">Not all fine watches appreciate equally. Based on 30 years of auction data, these are the calibre complications that collectors should seek.</p>
+          <div class="blog-card-meta"><span>Apr 12, 2026</span>·<span>9 min read</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="newsletter-banner" data-aos="fade-up">
+  <div class="section-eyebrow" style="justify-content:center">The Stackly Journal</div>
+  <h2 class="section-title">Never miss a <em>story</em></h2>
+  <p class="section-desc centered">Horological insights and atelier stories delivered monthly to your inbox.</p>
+  <form class="newsletter-form" aria-label="Newsletter">
+    <label for="blog-email" class="sr-only">Email address</label>
+    <input type="email" id="blog-email" placeholder="Your email address" required autocomplete="email">
+    <button type="submit" class="btn-primary">Subscribe</button>
+  </form>
+</div>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">STACK<span>LY</span></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html?cat=classic">Classique</a></li>
+          <li><a href="shop.html?cat=sports">Aqua Profonde</a></li>
+          <li><a href="shop.html?cat=chrono">Chrono Sport</a></li>
+          <li><a href="shop.html?cat=tourbillon">Tourbillon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

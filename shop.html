@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Browse the full Stackly collection — classic dress watches, sport divers, chronographs, and tourbillons.">
+  <title>Collection — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div id="page-loader" aria-hidden="true"><div class="loader-logo">STACKLY</div><div class="loader-bar"></div></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-outline" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">STACK<span>LY</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Service</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
+      <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
+      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav class="mobile-nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Service</a>
+    <a href="blog.html">Blog</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+</div>
+
+<div class="page-hero" style="padding-top:var(--nav-h)">
+  <div class="page-hero-bg">
+    <img src="assets/images/about-hero-banner.webp" alt="Stackly watch manufacture interior with precision machinery" loading="lazy" width="1200" height="675">
+  </div>
+  <div class="page-hero-content">
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Collection</span></nav>
+    <h1 class="page-hero-title">The <em style="font-style:italic;color:var(--clr-gold)">Collection</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="section">
+    <div class="filter-bar" role="group" aria-label="Filter by collection">
+      <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+      <button class="filter-btn" data-filter="classic" id="filter-classic">Classique</button>
+      <button class="filter-btn" data-filter="sports" id="filter-sports">Aqua Profonde</button>
+      <button class="filter-btn" data-filter="chrono" id="filter-chrono">Chrono Sport</button>
+      <button class="filter-btn" data-filter="tourbillon" id="filter-tourbillon">Tourbillon</button>
+    </div>
+    <div class="products-grid" id="products-grid" data-gsap="stagger">
+      <article class="product-card" data-category="classic"><div class="product-card-image"><img src="assets/images/collection-classic.webp" alt="Stackly Classique I — white enamel dress watch" loading="lazy" width="480" height="640"><span class="product-badge">Bestseller</span></div><div class="product-card-body"><p class="product-category">Classique</p><h3 class="product-name">Classique I</h3><p class="product-price">$12,400</p><button class="btn-add-to-cart" aria-label="Add Classique I to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="classic"><div class="product-card-image"><img src="assets/images/watch-movement-detail.webp" alt="Stackly Classique II — openwork skeleton movement dial" loading="lazy" width="600" height="600"></div><div class="product-card-body"><p class="product-category">Classique</p><h3 class="product-name">Classique II Squelette</h3><p class="product-price">$28,500</p><button class="btn-add-to-cart" aria-label="Add Classique II to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="sports"><div class="product-card-image"><img src="assets/images/collection-sports.webp" alt="Stackly Diver 300 — professional diver with blue dial" loading="lazy" width="480" height="640"><span class="product-badge">New</span></div><div class="product-card-body"><p class="product-category">Aqua Profonde</p><h3 class="product-name">Diver 300</h3><p class="product-price"><del>$18,600</del>$15,900</p><button class="btn-add-to-cart" aria-label="Add Diver 300 to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="chrono"><div class="product-card-image"><img src="assets/images/collection-chronograph.webp" alt="Stackly Tachymeter RS — rose gold racing chronograph" loading="lazy" width="480" height="640"></div><div class="product-card-body"><p class="product-category">Chrono Sport</p><h3 class="product-name">Tachymeter RS</h3><p class="product-price">$22,800</p><button class="btn-add-to-cart" aria-label="Add Tachymeter RS to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="tourbillon"><div class="product-card-image"><img src="assets/images/collection-tourbillon.webp" alt="Stackly Tourbillon Prestige T1 — platinum flying tourbillon" loading="lazy" width="480" height="640"><span class="product-badge">Limited</span></div><div class="product-card-body"><p class="product-category">Tourbillon</p><h3 class="product-name">Prestige T1</h3><p class="product-price">$148,000</p><button class="btn-add-to-cart" aria-label="Add Prestige T1 to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="classic"><div class="product-card-image"><img src="assets/images/luxury-watch-macro.webp" alt="Stackly Hommage — skeleton rose gold open heart watch" loading="lazy" width="600" height="600"></div><div class="product-card-body"><p class="product-category">Classique</p><h3 class="product-name">Hommage Skeleton</h3><p class="product-price">$45,200</p><button class="btn-add-to-cart" aria-label="Add Hommage to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="sports"><div class="product-card-image"><img src="assets/images/collection-sports.webp" alt="Stackly Diver 600 — titanium deep sea diver" loading="lazy" width="480" height="640"></div><div class="product-card-body"><p class="product-category">Aqua Profonde</p><h3 class="product-name">Diver 600 Titanium</h3><p class="product-price">$34,900</p><button class="btn-add-to-cart" aria-label="Add Diver 600 to cart">Add to Selection</button></div></article>
+      <article class="product-card" data-category="chrono"><div class="product-card-image"><img src="assets/images/collection-chronograph.webp" alt="Stackly Grand Complication — flyback chronograph with perpetual calendar" loading="lazy" width="480" height="640"><span class="product-badge">New</span></div><div class="product-card-body"><p class="product-category">Chrono Sport</p><h3 class="product-name">Grand Complication FC</h3><p class="product-price">$68,000</p><button class="btn-add-to-cart" aria-label="Add Grand Complication to cart">Add to Selection</button></div></article>
+    </div>
+  </div>
+</section>
+
+<div class="newsletter-banner" data-aos="fade-up">
+  <div class="section-eyebrow" style="justify-content:center">Exclusive Access</div>
+  <h2 class="section-title">Join the inner <em>circle</em></h2>
+  <p class="section-desc centered">Be first to know about limited-edition releases and private previews.</p>
+  <form class="newsletter-form" aria-label="Newsletter subscription">
+    <label for="shop-email" class="sr-only">Email address</label>
+    <input type="email" id="shop-email" placeholder="Your email address" required autocomplete="email">
+    <button type="submit" class="btn-primary">Subscribe</button>
+  </form>
+</div>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">STACK<span>LY</span></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html?cat=classic">Classique</a></li>
+          <li><a href="shop.html?cat=sports">Aqua Profonde</a></li>
+          <li><a href="shop.html?cat=chrono">Chrono Sport</a></li>
+          <li><a href="shop.html?cat=tourbillon">Tourbillon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

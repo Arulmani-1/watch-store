@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Contact Stackly — visit our boutique, schedule a service, or speak with a watch specialist.">
+  <title>Contact — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div id="page-loader" aria-hidden="true"><div class="loader-logo">STACKLY</div><div class="loader-bar"></div></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">STACK<span>LY</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Service</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
+      <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
+      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav class="mobile-nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Service</a>
+    <a href="blog.html">Blog</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+</div>
+
+<div class="page-hero" style="padding-top:var(--nav-h)">
+  <div class="page-hero-bg">
+    <img src="assets/images/about-hero-banner.webp" alt="Stackly manufacture in Jura, Switzerland" fetchpriority="high" width="1200" height="675">
+  </div>
+  <div class="page-hero-content">
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></nav>
+    <h1 class="page-hero-title">Get in <em style="font-style:italic;color:var(--clr-gold)">Touch</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="section">
+    <div class="contact-grid" data-aos="fade-up">
+      <!-- Info Column -->
+      <div>
+        <div class="section-eyebrow">Contact</div>
+        <h2 class="section-title">We would love<br>to <em>hear from you</em></h2>
+        <div class="gold-divider"></div>
+        <p class="section-desc">Whether you are seeking your first Stackly or your tenth, our specialists are here to guide you.</p>
+
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fa-regular fa-location-dot"></i></div>
+          <div><div class="contact-info-title">Manufacture</div><div class="contact-info-value">24 Rue de la Haute Horlogerie<br>Le Sentier, Jura 1347<br>Switzerland</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fa-regular fa-phone"></i></div>
+          <div><div class="contact-info-title">Phone</div><div class="contact-info-value">+41 21 845 6700</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+          <div><div class="contact-info-title">Email</div><div class="contact-info-value">concierge@stackly.ch</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+          <div><div class="contact-info-title">Hours</div><div class="contact-info-value">Mon–Fri: 9:00 – 18:00<br>Saturday: 10:00 – 15:00</div></div>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div data-aos="fade-left">
+        <form id="contact-form" aria-label="Contact form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-first" class="form-label">First Name</label>
+              <input type="text" id="contact-first" class="form-control" placeholder="Henri" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="contact-last" class="form-label">Last Name</label>
+              <input type="text" id="contact-last" class="form-control" placeholder="Marchetti" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-email" class="form-label">Email</label>
+            <input type="email" id="contact-email" class="form-control" placeholder="henri@example.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="contact-subject" class="form-label">Subject</label>
+            <select id="contact-subject" class="form-control">
+              <option value="">Select a topic</option>
+              <option value="purchase">Purchase Enquiry</option>
+              <option value="service">Service Request</option>
+              <option value="tour">Atelier Tour</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label">Message</label>
+            <textarea id="contact-message" class="form-control" rows="5" placeholder="Tell us how we can assist you..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full" id="contact-submit">
+            Send Message <i class="fa-regular fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="map-section" data-aos="fade-up">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.351052676882!2d6.2289456!3d46.6080379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c5c7db6a4fbbb%3A0xc622e03943486e9e!2s1347%20Le%20Sentier%2C%20Switzerland!5e0!3m2!1sen!2sus!4v1714000000000!5m2!1sen!2sus" 
+    width="100%" 
+    height="450" 
+    style="border:0; filter: grayscale(100%) invert(90%) contrast(85%); margin-bottom: -5px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">STACK<span>LY</span></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html?cat=classic">Classique</a></li>
+          <li><a href="shop.html?cat=sports">Aqua Profonde</a></li>
+          <li><a href="shop.html?cat=chrono">Chrono Sport</a></li>
+          <li><a href="shop.html?cat=tourbillon">Tourbillon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script>
+document.getElementById("contact-form")?.addEventListener("submit", function(e) {
+  e.preventDefault();
+  showToast("Message sent. We will respond within 24 hours.");
+  this.reset();
+});
+</script>
+</body>
+</html>

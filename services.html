@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Stackly watch services — movement overhaul, restoration, bespoke engraving, strap replacement, and authentication.">
+  <title>Services — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div id="page-loader" aria-hidden="true"><div class="loader-logo">STACKLY</div><div class="loader-bar"></div></div>
+<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">STACK<span>LY</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html" class="active">Service</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
+      <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
+      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav class="mobile-nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Service</a>
+    <a href="blog.html">Blog</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+</div>
+
+<div class="page-hero" style="padding-top:var(--nav-h)">
+  <div class="page-hero-bg">
+    <img src="assets/images/blog-care-guide.webp" alt="Watchmaker servicing a luxury watch with professional tools" fetchpriority="high" width="1200" height="800">
+  </div>
+  <div class="page-hero-content">
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></nav>
+    <h1 class="page-hero-title">Expert <em style="font-style:italic;color:var(--clr-gold)">Services</em></h1>
+  </div>
+</div>
+
+<section>
+  <div class="section">
+    <div class="section-header centered" data-aos="fade-up">
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="section-title">Care worthy of <em>a masterpiece</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc centered">Our certified watchmakers use the same tools and techniques as the original artisans who built your timepiece.</p>
+    </div>
+    <div class="services-grid" data-gsap="stagger">
+      <div class="service-card"><div class="service-icon"><i class="fa-regular fa-gear"></i></div><h3 class="service-name">Movement Overhaul</h3><p class="service-desc">Complete disassembly, ultrasonic cleaning, lubrication, regulation, and accuracy certification to COSC standards.</p><a href="contact.html" class="btn-text mt-3">Book Service <i class="fa-regular fa-arrow-right"></i></a></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-regular fa-sparkles"></i></div><h3 class="service-name">Case &amp; Bracelet Polish</h3><p class="service-desc">Full refinishing using original Stackly finishing techniques — brushed, polished, and satin micro-blasted surfaces.</p><a href="contact.html" class="btn-text mt-3">Book Service <i class="fa-regular fa-arrow-right"></i></a></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-regular fa-pen-nib"></i></div><h3 class="service-name">Bespoke Engraving</h3><p class="service-desc">Hand-engraving by our atelier's finest artisans. Monograms, dedications, and decorative motifs on case back.</p><a href="contact.html" class="btn-text mt-3">Book Service <i class="fa-regular fa-arrow-right"></i></a></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-regular fa-shield-check"></i></div><h3 class="service-name">Authentication</h3><p class="service-desc">Full provenance verification and certification for pre-owned Stackly timepieces. Certificate of authenticity issued.</p><a href="contact.html" class="btn-text mt-3">Book Service <i class="fa-regular fa-arrow-right"></i></a></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-regular fa-scissors"></i></div><h3 class="service-name">Strap Replacement</h3><p class="service-desc">Genuine Stackly alligator, crocodile, rubber, and metal bracelets. Custom sizing and hand-stitching available.</p><a href="contact.html" class="btn-text mt-3">Book Service <i class="fa-regular fa-arrow-right"></i></a></div>
+      <div class="service-card"><div class="service-icon"><i class="fa-regular fa-eye"></i></div><h3 class="service-name">Atelier Tour</h3><p class="service-desc">Private guided tour of our Jura manufacture. See master watchmakers at work and the history of the calibres.</p><a href="contact.html" class="btn-text mt-3">Book Visit <i class="fa-regular fa-arrow-right"></i></a></div>
+    </div>
+  </div>
+</section>
+
+<div class="craft-banner" data-aos="fade">
+  <div class="craft-banner-bg">
+    <img src="assets/images/craftsmanship-workshop.webp" alt="Watchmaker at workshop bench with precision instruments" loading="lazy" width="900" height="600">
+  </div>
+  <div class="craft-banner-content">
+    <div class="section-eyebrow">Trust</div>
+    <h2 class="section-title" style="color:var(--clr-white)">Only <em>original</em><br>parts used</h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc">We stock every part we have ever manufactured since 1910. Your watch will leave our atelier as precise as the day it was born.</p>
+    <a href="contact.html" class="btn-primary mt-4">Schedule a Service</a>
+  </div>
+</div>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">STACK<span>LY</span></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html?cat=classic">Classique</a></li>
+          <li><a href="shop.html?cat=sports">Aqua Profonde</a></li>
+          <li><a href="shop.html?cat=chrono">Chrono Sport</a></li>
+          <li><a href="shop.html?cat=tourbillon">Tourbillon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

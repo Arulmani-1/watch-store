@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="The story of Stackly — 138 years of Swiss watchmaking heritage, master craftsmen, and the pursuit of horological perfection.">
+  <title>Our Story — Stackly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div id="page-loader" aria-hidden="true"><div class="loader-logo">STACKLY</div><div class="loader-bar"></div></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-outline" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">STACK<span>LY</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="services.html">Service</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
+      <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
+      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    </div>
+  </div>
+</nav>
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav class="mobile-nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Service</a>
+    <a href="blog.html">Blog</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero" style="padding-top:var(--nav-h)">
+  <div class="page-hero-bg">
+    <img src="assets/images/about-hero-banner.webp" alt="Stackly Swiss manufacture watchmakers working at precision benches" fetchpriority="high" width="1200" height="675">
+  </div>
+  <div class="page-hero-content">
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Maison</span></nav>
+    <h1 class="page-hero-title">La <em style="font-style:italic;color:var(--clr-gold)">Maison</em></h1>
+  </div>
+</div>
+
+<!-- Intro -->
+<section>
+  <div class="featured-split" data-aos="fade-up">
+    <div>
+      <div class="section-eyebrow">Our Heritage</div>
+      <h2 class="section-title">138 years of<br><em>unbroken precision</em></h2>
+      <div class="gold-divider"></div>
+      <p class="section-desc">Founded in the Jura mountains of Switzerland in 1886 by Henri Stackly, our maison began with a single obsession: to create mechanisms that would outlive their owners.</p>
+      <p class="section-desc mt-3">Three generations and two world wars later, that obsession remains unchanged. Every watchmaker we hire apprentices for six years before touching a calibre.</p>
+      <a href="contact.html" class="btn-text mt-4">Visit the atelier <i class="fa-regular fa-arrow-right"></i></a>
+    </div>
+    <div class="featured-image-wrap">
+      <img src="assets/images/craftsmanship-workshop.webp" alt="Stackly master watchmaker working under magnification at workshop bench" loading="lazy" width="900" height="600">
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section style="background:var(--clr-bg-alt);border-top:1px solid var(--clr-border);border-bottom:1px solid var(--clr-border)">
+  <div class="section">
+    <div class="section-header centered" data-aos="fade-up">
+      <div class="section-eyebrow">Our Values</div>
+      <h2 class="section-title">Built on <em>principles</em></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="about-values-grid" data-gsap="stagger">
+      <div class="value-card"><div class="value-num">01</div><h3 class="value-title">Precision</h3><p class="value-text">Every component is machined to tolerances of ±0.003mm. We use Swiss Made certified movements and reject 40% of parts during quality control.</p></div>
+      <div class="value-card"><div class="value-num">02</div><h3 class="value-title">Longevity</h3><p class="value-text">Our timepieces are designed to last centuries with proper care. We stock spare parts for every model we have ever produced since 1910.</p></div>
+      <div class="value-card"><div class="value-num">03</div><h3 class="value-title">Heritage</h3><p class="value-text">We refuse to compromise tradition for trend. Each new calibre must pass the spirit of Henri Stackly's original design philosophy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Workshop Feature -->
+<div class="craft-banner" data-aos="fade">
+  <div class="craft-banner-bg">
+    <img src="assets/images/watch-movement-detail.webp" alt="Close-up of Stackly watch movement with blue screws and gold plates" loading="lazy" width="600" height="600">
+  </div>
+  <div class="craft-banner-content">
+    <div class="section-eyebrow">The Calibre</div>
+    <h2 class="section-title" style="color:var(--clr-white)">847 parts.<br>One <em>heartbeat</em>.</h2>
+    <div class="gold-divider"></div>
+    <p class="section-desc">Our flagship Cal. SLY-5 houses 847 individual components, each hand-finished by artisans who have devoted their lives to the language of gears.</p>
+    <a href="services.html" class="btn-primary mt-4">Movement Services</a>
+  </div>
+</div>
+
+<!-- Newsletter -->
+<div class="newsletter-banner" data-aos="fade-up">
+  <div class="section-eyebrow" style="justify-content:center">The Stackly Circle</div>
+  <h2 class="section-title">Become part of our <em>story</em></h2>
+  <p class="section-desc centered">Exclusive access to behind-the-scenes atelier content and private collector previews.</p>
+  <form class="newsletter-form" aria-label="Newsletter">
+    <label for="about-email" class="sr-only">Email address</label>
+    <input type="email" id="about-email" placeholder="Your email address" required autocomplete="email">
+    <button type="submit" class="btn-primary">Join Now</button>
+  </form>
+</div>
+
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo">STACK<span>LY</span></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="shop.html?cat=classic">Classique</a></li>
+          <li><a href="shop.html?cat=sports">Aqua Profonde</a></li>
+          <li><a href="shop.html?cat=chrono">Chrono Sport</a></li>
+          <li><a href="shop.html?cat=tourbillon">Tourbillon</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
