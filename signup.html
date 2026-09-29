@@ -23,6 +23,13 @@
     <p class="auth-subtitle">Create your collector account</p>
 
     <form id="signup-form" aria-label="Sign up form" novalidate>
+      <div class="form-group">
+        <label for="signup-role" class="form-label">Role</label>
+        <select id="signup-role" class="form-control" required style="cursor: pointer;">
+          <option value="client" style="background: var(--clr-bg); color: var(--clr-white);">Client</option>
+          <option value="admin" style="background: var(--clr-bg); color: var(--clr-white);">Admin</option>
+        </select>
+      </div>
       <div class="form-row">
         <div class="form-group">
           <label for="signup-first" class="form-label">First Name</label>

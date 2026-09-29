@@ -24,6 +24,13 @@
 
     <form id="login-form" aria-label="Login form" novalidate>
       <div class="form-group">
+        <label for="login-role" class="form-label">Role</label>
+        <select id="login-role" class="form-control" required style="cursor: pointer;">
+          <option value="client" style="background: var(--clr-bg); color: var(--clr-white);">Client</option>
+          <option value="admin" style="background: var(--clr-bg); color: var(--clr-white);">Admin</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="login-email" class="form-label">Email</label>
         <input type="email" id="login-email" class="form-control" placeholder="your@email.com" required autocomplete="email">
       </div>
