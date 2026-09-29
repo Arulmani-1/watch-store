@@ -347,12 +347,141 @@
     </div>
   </section>
 
-  <!-- ==================== PROMO BANNER ==================== -->
-  <section aria-labelledby="promo-title">
-    <div class="section" style="padding-bottom: 0;">
-      <img src="assets/images/new_watch.webp" alt="Exclusive Luxury Timepiece" style="width: 100%; border-radius: 4px; box-shadow: var(--shadow-card);" loading="lazy">
+  <!-- ==================== CHOOSE A DIAL ==================== -->
+  <section style="background: #fdfdfd; padding: 3rem 0; font-family: var(--ff-sans); text-align: center;">
+    <div class="section" style="max-width: 1000px; margin: 0 auto;">
+      <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #555; margin-bottom: 0.5rem; display: inline-block; border-bottom: 1px solid #c3b091; padding-bottom: 5px;">A VARIETY OF 300+ COLLECTION</div>
+      <h2 style="font-size: 3rem; font-family: var(--ff-display); margin: 0.5rem 0; color: #1a1a1a; text-transform: uppercase;"><span style="color: #c3b091;">CHOOSE A</span> DIAL</h2>
+      <p style="color: #555; margin: 1rem auto 3rem; max-width: 600px; line-height: 1.6; font-size: 0.95rem;">This is the best in class effective watches from the luxury brand watch.co and gizmo. Lot of efforts. Take a peek look into it</p>
+      
+      <div style="margin-bottom: 2rem;">
+        <img src="assets/images/dials.webp" alt="Variety of Watch Dials" style="width: 100%; max-width: 900px; height: auto; mix-blend-mode: multiply;">
+      </div>
     </div>
   </section>
+
+  <!-- ==================== FAQ SECTION ==================== -->
+  <section aria-labelledby="faq-title" style="background: #ffffff; padding: 3rem 0; font-family: var(--ff-sans);">
+    <style>
+      .faq-item { margin-bottom: 1rem; }
+      .faq-header {
+        background: #f5f5f5;
+        padding: 1.2rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: background 0.3s;
+        border: 1px solid #eaeaea;
+      }
+      .faq-header.active {
+        background: #c3b091; /* Gold */
+        color: #fff;
+        border-color: #c3b091;
+      }
+      .faq-content {
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-top: none;
+        padding: 1.5rem;
+        display: none;
+        color: #555;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+      .faq-item.active .faq-content {
+        display: block;
+      }
+    </style>
+    <div class="section" style="max-width: 900px; margin: 0 auto; color: #333;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #888; margin-bottom: 0.5rem; display: inline-block; border-bottom: 1px solid #333; padding-bottom: 5px;">FAQ</div>
+        <h2 style="font-size: 2.5rem; font-family: var(--ff-display); margin: 0; color: #1a1a1a; text-transform: uppercase;">How Can We <span style="color: #c3b091;">Help You?</span></h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <div class="faq-header active" onclick="toggleFaq(this)">
+            <span>What Type Of Websites Can I Build With This Theme?</span>
+            <i class="fa-solid fa-minus"></i>
+          </div>
+          <div class="faq-content">
+            You can build premium eCommerce websites for luxury watch brands, designer accessories, and high-end product showcases. Perfect for highlighting craftsmanship, exclusive collections, and delivering a modern, responsive shopping experience.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span>Will I Get All The Demos For Single Purchase With Lifetime Validity?</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-content">
+            Yes, all demos are included with a single purchase, and you will receive lifetime validity and updates.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span>Can I Change The Theme Language To My Local Language?</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-content">
+            Absolutely. The theme is fully translation-ready and supports RTL languages.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span>Why The Price Of SwissEagle Is Affordable Compared To Other Themes Providing Similar Features?</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-content">
+            We believe in providing exceptional value without compromising on quality or features.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span>How To Install The SwissEagle Theme In WordPress?</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-content">
+            Installation is simple via the WordPress dashboard. Detailed documentation is provided to guide you through the process step-by-step.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header" onclick="toggleFaq(this)">
+            <span>How Fast Is Your Support?</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-content">
+            Our dedicated support team typically responds within 24 hours to ensure your issues are resolved promptly.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleFaq(header) {
+        const item = header.parentElement;
+        const isActive = item.classList.contains('active');
+        
+        // Close all FAQs
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+          faq.querySelector('.faq-header').classList.remove('active');
+          faq.querySelector('.faq-header i').classList.remove('fa-minus');
+          faq.querySelector('.faq-header i').classList.add('fa-plus');
+        });
+        
+        // Open clicked if it wasn't active
+        if (!isActive) {
+          item.classList.add('active');
+          header.classList.add('active');
+          header.querySelector('i').classList.remove('fa-plus');
+          header.querySelector('i').classList.add('fa-minus');
+        }
+      }
+    </script>
+  </section>
+
 
   <!-- ==================== NEWSLETTER ==================== -->
   <div class="newsletter-banner" data-aos="fade-up">
@@ -396,9 +525,9 @@
         <h3 class="footer-col-title">Maison</h3>
         <ul class="footer-links">
           <li><a href="about.html">Our Story</a></li>
-          <li><a href="services.html">Services</a></li>
           <li><a href="blog.html">Journal</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="404.html">404 page</a></li>
+          <li><a href="#">FAQ</a></li>
         </ul>
       </div>
       <div>

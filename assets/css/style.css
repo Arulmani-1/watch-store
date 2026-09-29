@@ -2020,6 +2020,10 @@ footer {
 @media (max-width: 991px) {
   #nav-login-btn, #nav-signup-btn { display: none; }
 }
+/* Footer Styles */
+.footer-col-title {
+  color: var(--clr-gold) !important;
+}
 /* Footer Newsletter */
 .footer-newsletter-desc {
   color: var(--clr-silver);
