@@ -71,10 +71,22 @@
 <script>
 document.getElementById("signup-form")?.addEventListener("submit", function(e) {
   e.preventDefault();
+  const firstName = document.getElementById("signup-first")?.value || "";
+  const lastName = document.getElementById("signup-last")?.value || "";
+  const email = document.getElementById("signup-email")?.value || "";
   const p = document.getElementById("signup-password")?.value;
   const c = document.getElementById("signup-confirm")?.value;
+  
   if (p !== c) { showToast("Passwords do not match."); return; }
+  
+  let users = JSON.parse(localStorage.getItem('registeredUsers') || '{}');
+  users[email] = { firstName: firstName, lastName: lastName };
+  localStorage.setItem('registeredUsers', JSON.stringify(users));
+  
   showToast("Welcome to the Stackly family!");
+  setTimeout(() => {
+    window.location.href = 'login.html';
+  }, 1000);
 });
 </script>
 </body>

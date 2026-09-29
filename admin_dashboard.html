@@ -974,6 +974,14 @@
     const email = localStorage.getItem('userEmail');
     if (email) {
       document.getElementById('user-email').textContent = email;
+      
+      const users = JSON.parse(localStorage.getItem('registeredUsers') || '{}');
+      if (users[email] && users[email].firstName && users[email].lastName) {
+        const welcomeH3 = document.querySelector('.welcome-card h3');
+        if (welcomeH3) {
+          welcomeH3.textContent = `Welcome back ${users[email].firstName} ${users[email].lastName} !`;
+        }
+      }
     } else {
       document.getElementById('user-email').textContent = 'Guest User';
     }
