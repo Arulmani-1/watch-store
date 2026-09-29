@@ -14,9 +14,10 @@
 <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
 <div id="toast" role="status" aria-live="polite"></div>
 <main class="auth-wrapper" id="main-content">
-  <div class="auth-image-side"></div>
+  <div class="auth-image-side" style="position: relative;">
+    <a href="index.html" class="btn-text" style="position: absolute; top: clamp(1.5rem, 4vw, 3rem); left: clamp(1.5rem, 4vw, 3rem); z-index: 10; color: var(--clr-gold); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </div>
   <div class="auth-form-side" style="position: relative;">
-    <a href="index.html" class="btn-text" style="position: absolute; bottom: clamp(1rem, 3vw, 2rem); left: clamp(1rem, 3vw, 2rem); z-index: 10;"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   <div class="auth-card" data-aos="scale-in">
     <div class="auth-logo"><img src="assets/images/logo.webp" alt="Stackly Logo"></div>
     <h1 class="auth-title">Welcome back</h1>
@@ -71,5 +72,24 @@ document.getElementById("google-login")?.addEventListener("click", function() {
   showToast("Google authentication coming soon.");
 });
 </script>
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const role = document.getElementById('login-role').value;
+    const email = document.getElementById('login-email').value;
+    
+    // store email and role
+    localStorage.setItem('userEmail', email);
+    localStorage.setItem('userRole', role);
+    
+    if (role === 'admin') {
+      window.location.href = 'admin_dashboard.html';
+    } else {
+      window.location.href = 'client_dashboard.html';
+    }
+  });
+</script>
 </body>
+
 </html>
