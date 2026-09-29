@@ -454,7 +454,8 @@ select {
   text-align: center;
 }
 
-.mobile-nav-links a:hover {
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
   color: var(--clr-gold);
 }
 

@@ -12,44 +12,14 @@
 </head>
 <body>
 <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
-<nav id="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-container">
-    <a href="index.html" class="nav-logo"><img src="assets/images/logo.webp" alt="Stackly Logo"></a>
-    <ul class="nav-links" role="list">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Service</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <a href="login.html" class="nav-login" id="nav-login-btn">Login</a>
-      <a href="signup.html" class="nav-signup" id="nav-signup-btn">Sign Up</a>
-      <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-    </div>
-  </div>
-</nav>
-<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-  <nav class="mobile-nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="services.html">Service</a>
-    <a href="blog.html">Blog</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-    <a href="signup.html">Sign Up</a>
-  </nav>
-</div>
 
 <main class="not-found-wrapper" id="main-content">
   <div class="not-found-num" aria-hidden="true">404</div>
   <h1 class="not-found-title">Time stood still here</h1>
   <p class="not-found-text">The page you are looking for has been moved, deleted, or perhaps never existed. Let us guide you back to where time moves.</p>
-  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center">
-    <a href="index.html" class="btn-primary">Return Home <i class="fa-solid fa-arrow-right"></i></a>
-    <a href="shop.html" class="btn-ghost">Browse Collection</a>
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center; position:relative; z-index:10;">
+    <a href="index.html" class="btn-primary"><i class="fa-solid fa-house" style="margin-right:0.5rem"></i> Go to Home</a>
+    <button onclick="history.back()" style="display:inline-flex;align-items:center;border:1px solid #eab308;background:#eab308;padding:0.8rem 2rem;color:#111;text-decoration:none;font-weight:600;font-size:0.9rem;cursor:pointer;font-family:inherit;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'"><i class="fa-solid fa-arrow-left" style="margin-right:0.5rem"></i> Go Back</button>
   </div>
   <div style="margin-top:4rem;opacity:0.3">
     <img src="assets/images/luxury-watch-macro.webp" alt="Stackly skeleton watch movement" loading="lazy" width="200" height="200" style="width:120px;height:120px;object-fit:cover;border-radius:50%;margin:0 auto;filter:grayscale(1)">

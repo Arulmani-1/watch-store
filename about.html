@@ -37,7 +37,7 @@
 <div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
   <nav class="mobile-nav-links">
     <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
+    <a href="about.html" class="active">About Us</a>
     <a href="services.html">Service</a>
     <a href="blog.html">Blog</a>
     <a href="shop.html">Shop</a>
@@ -50,7 +50,7 @@
 <!-- Page Hero -->
 <div class="page-hero" style="padding-top:var(--nav-h)">
   <div class="page-hero-bg">
-    <img src="assets/images/about-hero-banner.webp" alt="Stackly Swiss manufacture watchmakers working at precision benches" fetchpriority="high" width="1200" height="675">
+    <video src="assets/videos/watch.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;"></video>
   </div>
   <div class="page-hero-content">
     <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>About Us</span></nav>
@@ -73,6 +73,109 @@
       <img src="assets/images/craftsmanship-workshop.webp" alt="Stackly master watchmaker working under magnification at workshop bench" loading="lazy" width="900" height="600">
     </div>
   </div>
+</section>
+
+<!-- Stats Section -->
+<section style="background: #f8f8f8; padding: 4rem 0; border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: left;">
+      
+      <!-- Stat 1 -->
+      <div style="border-right: 1px solid #eaeaea; padding-right: 2rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #111; margin-bottom: 0.5rem; font-family: var(--ff-sans);">
+          <span class="count-up" data-target="150">0</span>+
+        </div>
+        <div style="font-size: 1rem; font-weight: 600; color: #111; margin-bottom: 0.5rem;">Limited Edition Releases</div>
+        <p style="color: #666; font-size: 0.85rem; line-height: 1.6; margin: 0;">Our limited edition releases are crafted in small quantities to ensure uniqueness.</p>
+      </div>
+
+      <!-- Stat 2 -->
+      <div style="border-right: 1px solid #eaeaea; padding-right: 2rem; padding-left: 1rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #111; margin-bottom: 0.5rem; font-family: var(--ff-sans);">
+          <span class="count-up" data-target="500">0</span>+
+        </div>
+        <div style="font-size: 1rem; font-weight: 600; color: #111; margin-bottom: 0.5rem;">Premium Watch Designs</div>
+        <p style="color: #666; font-size: 0.85rem; line-height: 1.6; margin: 0;">Our premium watch designs are crafted deliver a perfect balance of elegance.</p>
+      </div>
+
+      <!-- Stat 3 -->
+      <div style="padding-left: 1rem;">
+        <div style="font-size: 3rem; font-weight: 700; color: #111; margin-bottom: 0.5rem; font-family: var(--ff-sans);">
+          <span class="count-up-float" data-target="4.9">0.0</span>/5
+        </div>
+        <div style="font-size: 1rem; font-weight: 600; color: #111; margin-bottom: 0.5rem;">Average Customer Score</div>
+        <p style="color: #666; font-size: 0.85rem; line-height: 1.6; margin: 0;">Our high average customer rating reflects the trust and satisfaction of our customers.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 768px) {
+      .section > div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+      }
+      .section > div > div {
+        border-right: none !important;
+        border-bottom: 1px solid #eaeaea;
+        padding: 2rem 0 !important;
+      }
+      .section > div > div:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.count-up');
+      const floatCounters = document.querySelectorAll('.count-up-float');
+      const speed = 200;
+
+      const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Integer counters
+            counters.forEach(counter => {
+              const target = +counter.getAttribute('data-target');
+              let count = 0;
+              const inc = target / speed;
+              const updateCount = () => {
+                if (count < target) {
+                  count += inc;
+                  counter.innerText = Math.ceil(count);
+                  setTimeout(updateCount, 15);
+                } else {
+                  counter.innerText = target;
+                }
+              };
+              updateCount();
+            });
+            // Float counters
+            floatCounters.forEach(counter => {
+              const target = parseFloat(counter.getAttribute('data-target'));
+              let count = 0.0;
+              const inc = target / (speed / 2);
+              const updateCount = () => {
+                if (count < target) {
+                  count += inc;
+                  counter.innerText = count.toFixed(1);
+                  setTimeout(updateCount, 20);
+                } else {
+                  counter.innerText = target.toFixed(1);
+                }
+              };
+              updateCount();
+            });
+            observer.disconnect();
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(animateCounters, { threshold: 0.5 });
+      if (counters.length > 0) observer.observe(counters[0]);
+    });
+  </script>
 </section>
 
 <!-- Values -->
@@ -104,6 +207,161 @@
     <a href="services.html" class="btn-primary mt-4">Movement Services</a>
   </div>
 </div>
+
+<!-- Authorised Dealer Network -->
+<section style="background: #0e0e1a; color: #fff; padding: 4rem 0;">
+  <div class="section" style="max-width: 1000px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+    <!-- Top Header -->
+    <div style="margin-bottom: 3rem;">
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: #bbb; margin-bottom: 1rem;">
+        <span style="color: var(--clr-gold);">•</span> Authorised Dealer
+      </div>
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Authorised dealer network</h2>
+      <p style="color: #aaa; font-size: 0.95rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Our authorized dealer network ensures that every watch you purchase is 100% genuine and sourced directly from trusted partners.</p>
+    </div>
+
+    <!-- Logos Grid -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid rgba(255,255,255,0.1); background: transparent;">
+      <div style="padding: 2.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; letter-spacing: 2px; margin: 0;">T I M E X</h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 400; margin: 0;"><span style="font-weight: 700;">TITAN</span></h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Arial', sans-serif; font-size: 1.2rem; font-weight: 700; font-style: italic; margin: 0;">fastrack</h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; margin: 0;">CITIZEN</h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; margin: 0;">OMEGA</h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; margin: 0;">TUDOR</h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; border-right: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; margin: 0;">JAGUAR</h3>
+      </div>
+      <div style="padding: 2.5rem 1rem; display: flex; align-items: center; justify-content: center;">
+        <h3 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; font-weight: 700; margin: 0;">GUESS</h3>
+      </div>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div style="margin-top: 3rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+      <div style="font-size: 0.95rem; font-weight: 500;">
+        <span style="background: #fff; color: #111; color: #fff; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 12px; margin-right: 0.5rem; vertical-align: middle;">Free</span>
+        Explore the World's Finest Watch Brands - <a href="shop.html" style="color: #fff; text-decoration: underline; font-weight: 700;">Find Your Perfect Match Today</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 700; margin-top: 0.5rem;">
+        4.9/5 
+        <span style="color: var(--clr-gold); font-size: 0.8rem;">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </span>
+        Our 4200 Reviews
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    @media (max-width: 768px) {
+      .section > div[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .section > div[style*="grid-template-columns: repeat(4, 1fr)"] > div:nth-child(even) {
+        border-right: none !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .section > div[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      .section > div[style*="grid-template-columns: repeat(4, 1fr)"] > div {
+        border-right: none !important;
+      }
+    }
+  </style>
+</section>
+
+<!-- Journey Section -->
+<section style="background: #fff; padding: 4rem 0;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <!-- Top Header -->
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #f8f8f8; padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: #555; margin-bottom: 1rem;">
+        <span style="color: var(--clr-gold);">•</span> Our History
+      </div>
+      <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem;">Our timeless brand journey</h2>
+      <p style="color: #666; font-size: 0.95rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Over the years, we have evolved by blending traditional craftsmanship with modern innovation, creating timepieces that stand the test of time.</p>
+    </div>
+
+    <!-- Split Content -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <!-- Left: Automatic Slider -->
+      <div class="journey-slider-container" style="position: relative; overflow: hidden; border-radius: 8px; aspect-ratio: 4/3;">
+        <div class="journey-slides" style="display: flex; width: 300%; height: 100%; transition: transform 0.5s ease-in-out;">
+          <img src="assets/images/collection-classic.webp" style="width: 33.333%; height: 100%; object-fit: cover;" alt="Slide 1">
+          <img src="assets/images/collection-sports.webp" style="width: 33.333%; height: 100%; object-fit: cover;" alt="Slide 2">
+          <img src="assets/images/collection-chronograph.webp" style="width: 33.333%; height: 100%; object-fit: cover;" alt="Slide 3">
+        </div>
+        <!-- Arrows -->
+        <button class="journey-next" style="position: absolute; left: 20px; top: calc(50% - 25px); transform: translateY(-50%); background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.3s;"><i class="fa-solid fa-arrow-right"></i></button>
+        <button class="journey-prev" style="position: absolute; left: 20px; top: calc(50% + 25px); transform: translateY(-50%); background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.3s;"><i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div style="font-family: var(--ff-sans);">
+        <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">2021 – innovate & growth</h3>
+        <p style="color: #555; line-height: 1.6; margin-bottom: 1rem; font-size: 0.95rem;">We embraced advanced technology to enhance accuracy and performance while maintaining our signature elegance.</p>
+        <p style="color: #555; line-height: 1.6; margin-bottom: 2rem; font-size: 0.95rem;">Our journey began with a simple passion for precision and a deep appreciation for timeless craftsmanship. What started as a vision to create exceptional timepieces has grown into a brand known for quality, elegance, and trust.</p>
+        
+        <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0;">
+          <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; color: #555; font-size: 0.9rem;"><span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); color: var(--clr-gold); font-size: 0.5rem;">●</span> Enhanced customer experience through better service systems</li>
+          <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; color: #555; font-size: 0.9rem;"><span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); color: var(--clr-gold); font-size: 0.5rem;">●</span> Invested in research and development for future-ready timepieces</li>
+          <li style="position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; color: #555; font-size: 0.9rem;"><span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); color: var(--clr-gold); font-size: 0.5rem;">●</span> Improved quality standards and precision engineering processes</li>
+        </ul>
+
+        <div style="border-top: 1px solid #eaeaea; padding-top: 1.5rem; display: flex; flex-direction: column;">
+          <span style="font-family: 'Great Vibes', cursive, 'Times New Roman'; font-size: 1.8rem; color: #333; margin-bottom: 0.2rem; font-style: italic;">Dianne Russell</span>
+          <span style="font-size: 0.8rem; color: #888;">Owner & Founder</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 768px) {
+      .journey-slider-container { margin-bottom: 2rem; }
+      .journey-slides { width: 300% !important; }
+      .section > div:nth-child(2) { grid-template-columns: 1fr !important; gap: 2rem !important; }
+    }
+    .journey-next:hover, .journey-prev:hover { background: rgba(0,0,0,0.8) !important; color: var(--clr-gold) !important; }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelector('.journey-slides');
+      const prevBtn = document.querySelector('.journey-prev');
+      const nextBtn = document.querySelector('.journey-next');
+      let currentSlide = 0;
+      const totalSlides = 3;
+
+      function goToSlide(index) {
+        currentSlide = (index + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentSlide * (100 / totalSlides)}%)`;
+      }
+
+      nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+      prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+
+      // Automatic move every 3 seconds
+      setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, 3000);
+    });
+  </script>
+</section>
 
 <!-- Newsletter -->
 <div class="newsletter-banner" data-aos="fade-up">
