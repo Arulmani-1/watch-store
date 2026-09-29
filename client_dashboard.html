@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -13,11 +14,13 @@
       color: var(--clr-white);
       font-family: var(--ff-sans);
     }
+
     .dashboard-layout {
       display: flex;
       height: 100vh;
       overflow: hidden;
     }
+
     .sidebar {
       width: 260px;
       overflow-y: auto;
@@ -27,10 +30,12 @@
       display: flex;
       flex-direction: column;
     }
+
     .sidebar-logo img {
       height: 50px;
       margin-bottom: 3rem;
     }
+
     .sidebar-nav {
       list-style: none;
       padding: 0;
@@ -39,6 +44,7 @@
       flex-direction: column;
       gap: 1rem;
     }
+
     .sidebar-nav a {
       color: var(--clr-muted);
       text-decoration: none;
@@ -50,16 +56,21 @@
       border-radius: 8px;
       transition: background 0.3s, color 0.3s;
     }
-    .sidebar-nav a:hover, .sidebar-nav a.active {
+
+    .sidebar-nav a:hover,
+    .sidebar-nav a.active {
       background: rgba(255, 255, 255, 0.05);
       color: var(--clr-white);
     }
+
     .dashboard-main {
       flex: 1;
       display: flex;
       flex-direction: column;
-      min-width: 0; /* Fix parent flex overflow */
+      min-width: 0;
+      /* Fix parent flex overflow */
     }
+
     .dashboard-navbar {
       height: 80px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -70,56 +81,73 @@
       background: rgba(15, 18, 26, 0.5);
       backdrop-filter: blur(10px);
     }
+
     .dashboard-navbar h2 {
       font-family: var(--ff-display);
       font-size: 1.5rem;
       margin: 0;
     }
+
     .navbar-right {
       display: flex;
       align-items: center;
       gap: 1.5rem;
     }
+
     .user-email {
       color: var(--clr-silver);
       font-size: 0.95rem;
       font-weight: 600;
     }
+
     .dashboard-content {
       padding: 3rem;
       flex: 1;
       overflow-y: auto;
       min-width: 0;
-      box-sizing: border-box; /* Fix flex child overflow */
+      box-sizing: border-box;
+      /* Fix flex child overflow */
     }
-        .welcome-card {
+
+    .welcome-card {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.05);
       padding: 2rem;
       border-radius: 12px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .welcome-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
+
     .welcome-card h3 {
       margin-top: 0;
       color: var(--clr-gold);
       font-family: var(--ff-display);
       font-size: 1.8rem;
     }
+
     .tab-section {
       min-width: 0;
       width: 100%;
       animation: fadeIn 0.3s ease-in-out;
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-  
-    
+
+
     /* Custom Scrollbar for tables */
     .table-wrapper {
       overflow-x: auto;
@@ -127,35 +155,43 @@
       -webkit-overflow-scrolling: touch;
       padding-bottom: 5px;
     }
+
     .table-wrapper::-webkit-scrollbar {
       height: 8px;
     }
+
     .table-wrapper::-webkit-scrollbar-track {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       border-radius: 4px;
     }
+
     .table-wrapper::-webkit-scrollbar-thumb {
       background: var(--clr-gold);
       border-radius: 4px;
     }
-    
+
     /* Responsive Styles */
     .sidebar-overlay {
       display: none;
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
       z-index: 999;
       backdrop-filter: blur(2px);
     }
+
     .sidebar-overlay.active {
       display: block;
     }
-    
+
     @media (max-width: 991px) {
       .sidebar-toggle {
         display: block !important;
       }
+
       .sidebar {
         position: fixed;
         left: -280px;
@@ -163,552 +199,729 @@
         bottom: 0;
         z-index: 1000;
         transition: left 0.3s ease;
-        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
       }
+
       .sidebar.open {
         left: 0;
       }
+
       .dashboard-navbar {
         padding: 0 1.5rem;
       }
+
       .dashboard-content {
         padding: 1.5rem;
       }
     }
+
     @media (max-width: 576px) {
       .panel-title {
         display: none;
       }
+
       .user-email {
-        display: block; 
+        display: block;
         font-size: 0.85rem;
       }
+
       .dashboard-content {
         padding: 1rem;
       }
     }
-      .dashboard-card {
-      background: rgba(255,255,255,0.05);
+
+    .dashboard-card {
+      background: rgba(255, 255, 255, 0.05);
       padding: 1.5rem;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
+
     .dashboard-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      background: rgba(255,255,255,0.08);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.08);
     }
+
     .wishlist-card {
       text-align: center;
-      background: rgba(255,255,255,0.02);
+      background: rgba(255, 255, 255, 0.02);
       padding: 1.5rem;
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
+
     .wishlist-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      background: rgba(255,255,255,0.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      background: rgba(255, 255, 255, 0.05);
     }
-        .welcome-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .welcome-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-</style>
+
+    .welcome-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .welcome-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
 </head>
+
 <body>
-<div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-outline" aria-hidden="true"></div>
 
 
-<div class="dashboard-layout">
-  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <div style="margin-bottom: 2.5rem;">
-        <a href="javascript:void(0)" onclick="showSection('dashboard', document.querySelector('.sidebar-nav li:first-child a'))" class="logo" style="display:inline-block; margin-bottom:0.5rem;">
-            <img src="assets/images/logo.webp" alt="Stackly Logo" style="height: 30px;">
+  <div class="dashboard-layout">
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div style="margin-bottom: 2.5rem;">
+        <a href="javascript:void(0)"
+          onclick="showSection('dashboard', document.querySelector('.sidebar-nav li:first-child a'))" class="logo"
+          style="display:inline-block; margin-bottom:0.5rem;">
+          <img src="assets/images/logo.webp" alt="Stackly Logo" style="height: 30px;">
         </a>
-        <div style="color: var(--clr-gold); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; padding-left: 0.2rem;">Client Portal</div>
-    </div>
-    <ul class="sidebar-nav">
-      <li><a href="javascript:void(0)" class="active" onclick="showSection('dashboard', this)"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
-      <li><a href="javascript:void(0)" class="" onclick="showSection('orders', this)"><i class="fa-solid fa-box"></i> Orders</a></li>
-      <li><a href="javascript:void(0)" class="" onclick="showSection('profile', this)"><i class="fa-solid fa-user"></i> Profile</a></li>
-      <li><a href="javascript:void(0)" class="" onclick="showSection('wishlist', this)"><i class="fa-solid fa-heart"></i> Wishlist</a></li>
-      <li><a href="javascript:void(0)" class="" onclick="showSection('notifications', this)"><i class="fa-solid fa-bell"></i> Notifications</a></li>
-      <li><a href="javascript:void(0)" class="" onclick="showSection('settings', this)"><i class="fa-solid fa-gear"></i> Settings</a></li>
-
-    </ul>
-    <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-      <button onclick="logout()" style="width: 100%; background: rgba(255,59,48,0.1); color: #ff3b30; border: none; padding: 0.75rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600; font-size: 1rem; transition: background 0.3s;">
-        <i class="fa-solid fa-right-from-bracket"></i> Logout
-      </button>
-    </div>
-  </aside>
-
-  <!-- Main Content -->
-  <main class="dashboard-main">
-    <!-- Navbar -->
-    <nav class="dashboard-navbar">
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <button class="sidebar-toggle" onclick="toggleSidebar()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;"><i class="fa-solid fa-bars"></i></button>
-        <h2 class="panel-title">Client Panel</h2>
+        <div
+          style="color: var(--clr-gold); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; padding-left: 0.2rem;">
+          Client Portal</div>
       </div>
-      <div class="navbar-right">
-        <span class="user-email" id="user-email">loading...</span>
+      <ul class="sidebar-nav">
+        <li><a href="javascript:void(0)" class="active" onclick="showSection('dashboard', this)"><i
+              class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+        <li><a href="javascript:void(0)" class="" onclick="showSection('orders', this)"><i class="fa-solid fa-box"></i>
+            Orders</a></li>
+        <li><a href="javascript:void(0)" class="" onclick="showSection('profile', this)"><i
+              class="fa-solid fa-user"></i> Profile</a></li>
+        <li><a href="javascript:void(0)" class="" onclick="showSection('wishlist', this)"><i
+              class="fa-solid fa-heart"></i> Wishlist</a></li>
+        <li><a href="javascript:void(0)" class="" onclick="showSection('notifications', this)"><i
+              class="fa-solid fa-bell"></i> Notifications</a></li>
+        <li><a href="javascript:void(0)" class="" onclick="showSection('settings', this)"><i
+              class="fa-solid fa-gear"></i> Settings</a></li>
+
+      </ul>
+      <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <button onclick="logout()"
+          style="width: 100%; background: rgba(255,59,48,0.1); color: #ff3b30; border: none; padding: 0.75rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-weight: 600; font-size: 1rem; transition: background 0.3s;">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
       </div>
-    </nav>
+    </aside>
 
-    <!-- Content -->
-    <div class="dashboard-content">
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <!-- Navbar -->
+      <nav class="dashboard-navbar">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <button class="sidebar-toggle" onclick="toggleSidebar()"
+            style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;"><i
+              class="fa-solid fa-bars"></i></button>
+          <h2 class="panel-title"></h2>
+        </div>
+        <div class="navbar-right">
+          <span class="user-email" id="user-email">loading...</span>
+        </div>
+      </nav>
 
-      <section id="sec-dashboard" class="tab-section" style="display: block;">
-        <div class="welcome-card" style="margin-bottom: 2rem;">
-          <h3>Welcome back, Client!</h3>
-          <p>Here is an overview of your recent activity and account status.</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-          <div class="dashboard-card">
-            <h4 style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Total Orders</h4>
-            <p style="font-size: 2rem; margin:0; color: var(--clr-gold); font-weight: bold;">3</p>
+      <!-- Content -->
+      <div class="dashboard-content">
+
+        <section id="sec-dashboard" class="tab-section" style="display: block;">
+          <div class="welcome-card" style="margin-bottom: 2rem;">
+            <h3>Welcome back, Client !</h3>
           </div>
-          <div class="dashboard-card">
-            <h4 style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Wishlist Items</h4>
-            <p style="font-size: 2rem; margin:0; color: var(--clr-gold); font-weight: bold;">5</p>
-          </div>
-          <div class="dashboard-card">
-            <h4 style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Reward Points</h4>
-            <p style="font-size: 2rem; margin:0; color: var(--clr-gold); font-weight: bold;">1,250</p>
-          </div>
-        </div>
-      
-        <div style="margin-top: 3rem;">
-          <h3 style="color: var(--clr-gold); margin-bottom: 1.5rem;">Recent Activity Timeline</h3>
-          <div style="border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5rem; margin-left: 1rem;">
-            <div style="position: relative; margin-bottom: 2rem;">
-              <div style="position: absolute; left: -1.85rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--clr-gold);"></div>
-              <h4 style="margin: 0; color: #fff;">Order #ORD-7901 processing</h4>
-              <p style="margin: 0.5rem 0 0 0; color: var(--clr-muted); font-size: 0.9rem;">Sep 25, 2026 - 10:30 AM</p>
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div class="dashboard-card">
+              <h4 style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Total Orders</h4>
+              <p style="font-size: 2rem; margin:0; color: var(--clr-gold); font-weight: bold;">3</p>
             </div>
-            <div style="position: relative; margin-bottom: 2rem;">
-              <div style="position: absolute; left: -1.85rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--clr-silver);"></div>
-              <h4 style="margin: 0; color: #fff;">Added "Classique I" to Wishlist</h4>
-              <p style="margin: 0.5rem 0 0 0; color: var(--clr-muted); font-size: 0.9rem;">Sep 20, 2026 - 02:15 PM</p>
+            <div class="dashboard-card">
+              <h4 style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Wishlist Items</h4>
+              <p style="font-size: 2rem; margin:0; color: var(--clr-gold); font-weight: bold;">5</p>
             </div>
-            <div style="position: relative;">
-              <div style="position: absolute; left: -1.85rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--clr-silver);"></div>
-              <h4 style="margin: 0; color: #fff;">Account Created</h4>
-              <p style="margin: 0.5rem 0 0 0; color: var(--clr-muted); font-size: 0.9rem;">Sep 10, 2026 - 09:00 AM</p>
+            <div class="dashboard-card">
+              <h4 style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Reward Points</h4>
+              <p style="font-size: 2rem; margin:0; color: var(--clr-gold); font-weight: bold;">1,250</p>
             </div>
           </div>
-        </div>
+
+          <div style="margin-top: 3rem;">
+            <h3 style="color: var(--clr-gold); margin-bottom: 1.5rem;">Recent Activity Timeline</h3>
+            <div style="border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5rem; margin-left: 1rem;">
+              <div style="position: relative; margin-bottom: 2rem;">
+                <div
+                  style="position: absolute; left: -1.85rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--clr-gold);">
+                </div>
+                <h4 style="margin: 0; color: #fff;">Order #ORD-7901 processing</h4>
+                <p style="margin: 0.5rem 0 0 0; color: var(--clr-muted); font-size: 0.9rem;">Sep 25, 2026 - 10:30 AM</p>
+              </div>
+              <div style="position: relative; margin-bottom: 2rem;">
+                <div
+                  style="position: absolute; left: -1.85rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--clr-silver);">
+                </div>
+                <h4 style="margin: 0; color: #fff;">Added "Classique I" to Wishlist</h4>
+                <p style="margin: 0.5rem 0 0 0; color: var(--clr-muted); font-size: 0.9rem;">Sep 20, 2026 - 02:15 PM</p>
+              </div>
+              <div style="position: relative;">
+                <div
+                  style="position: absolute; left: -1.85rem; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--clr-silver);">
+                </div>
+                <h4 style="margin: 0; color: #fff;">Account Created</h4>
+                <p style="margin: 0.5rem 0 0 0; color: var(--clr-muted); font-size: 0.9rem;">Sep 10, 2026 - 09:00 AM</p>
+              </div>
+            </div>
+          </div>
         </section>
-      
-      <section id="sec-orders" class="tab-section" style="display: none;">
-        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+
+        <section id="sec-orders" class="tab-section" style="display: none;">
+          <div
+            style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
             <h3 style="color: var(--clr-gold); margin-top:0;">My Orders</h3>
             <div style="display: flex; gap: 1rem;">
-                <input type="text" placeholder="Search orders..." style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: #fff;">
-                <button style="background: rgba(255,255,255,0.1); color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Filter</button>
+              <input type="text" placeholder="Search orders..."
+                style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: #fff;">
+              <button
+                style="background: rgba(255,255,255,0.1); color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Filter</button>
             </div>
-        </div>
-        <div class="table-wrapper"><table style="min-width: 600px; width: 100%; text-align: left; border-collapse: collapse; border: 1px solid rgba(255,255,255,0.1);">
-          <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
-            <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Order ID</th>
-            <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Product</th>
-            <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Date</th>
-            <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Status</th>
-            <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Total</th>
-            <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver); text-align: right;">Action</th>
-          </tr>
-          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7901</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Classique I</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Sep 25, 2026</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span style="background: rgba(241,196,15,0.2); color: #f1c40f; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i class="fa-solid fa-spinner fa-spin"></i> Processing</span></td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$12,400</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button style="background: transparent; color: var(--clr-gold); border: 1px solid var(--clr-gold); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">View Invoice</button></td>
-          </tr>
-          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7829</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Tourbillon Prestige</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Sep 12, 2026</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span style="background: rgba(46,204,113,0.2); color: #2ecc71; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i class="fa-solid fa-check"></i> Delivered</span></td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$45,000</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button style="background: transparent; color: var(--clr-gold); border: 1px solid var(--clr-gold); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">View Invoice</button></td>
-          </tr>
-          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7750</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Aqua Profonde Diver</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Aug 05, 2026</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span style="background: rgba(46,204,113,0.2); color: #2ecc71; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i class="fa-solid fa-check"></i> Delivered</span></td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$15,900</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button style="background: transparent; color: var(--clr-gold); border: 1px solid var(--clr-gold); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">View Invoice</button></td>
-          </tr>
-          <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7402</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Chrono Racing Edition</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Jun 22, 2026</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span style="background: rgba(231,76,60,0.2); color: #e74c3c; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i class="fa-solid fa-xmark"></i> Cancelled</span></td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$8,500</td>
-            <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button style="background: transparent; color: var(--clr-silver); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">Details</button></td>
-          </tr>
-        </table></div>
-        
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; color: var(--clr-silver); font-size: 0.9rem;">
+          </div>
+          <div class="table-wrapper">
+            <table
+              style="min-width: 600px; width: 100%; text-align: left; border-collapse: collapse; border: 1px solid rgba(255,255,255,0.1);">
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <th
+                  style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">
+                  Order ID</th>
+                <th
+                  style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">
+                  Product</th>
+                <th
+                  style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">
+                  Date</th>
+                <th
+                  style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">
+                  Status</th>
+                <th
+                  style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">
+                  Total</th>
+                <th
+                  style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver); text-align: right;">
+                  Action</th>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7901</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Classique I</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Sep 25, 2026</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span
+                    style="background: rgba(241,196,15,0.2); color: #f1c40f; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i
+                      class="fa-solid fa-spinner fa-spin"></i> Processing</span></td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$12,400</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button
+                    style="background: transparent; color: var(--clr-gold); border: 1px solid var(--clr-gold); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">View
+                    Invoice</button></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7829</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Tourbillon Prestige</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Sep 12, 2026</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span
+                    style="background: rgba(46,204,113,0.2); color: #2ecc71; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i
+                      class="fa-solid fa-check"></i> Delivered</span></td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$45,000</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button
+                    style="background: transparent; color: var(--clr-gold); border: 1px solid var(--clr-gold); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">View
+                    Invoice</button></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7750</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Aqua Profonde Diver</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Aug 05, 2026</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span
+                    style="background: rgba(46,204,113,0.2); color: #2ecc71; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i
+                      class="fa-solid fa-check"></i> Delivered</span></td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$15,900</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button
+                    style="background: transparent; color: var(--clr-gold); border: 1px solid var(--clr-gold); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">View
+                    Invoice</button></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); font-weight: bold;">#ORD-7402</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Chrono Racing Edition</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">Jun 22, 2026</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);"><span
+                    style="background: rgba(231,76,60,0.2); color: #e74c3c; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem;"><i
+                      class="fa-solid fa-xmark"></i> Cancelled</span></td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$8,500</td>
+                <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button
+                    style="background: transparent; color: var(--clr-silver); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">Details</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; color: var(--clr-silver); font-size: 0.9rem;">
             <span>Showing 1 to 4 of 4 entries</span>
             <div style="display: flex; gap: 0.5rem;">
-                <button style="background: rgba(255,255,255,0.1); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #fff; cursor: not-allowed; opacity: 0.5;">Previous</button>
-                <button style="background: var(--clr-gold); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #000; font-weight: bold;">1</button>
-                <button style="background: rgba(255,255,255,0.1); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #fff; cursor: not-allowed; opacity: 0.5;">Next</button>
+              <button
+                style="background: rgba(255,255,255,0.1); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #fff; cursor: not-allowed; opacity: 0.5;">Previous</button>
+              <button
+                style="background: var(--clr-gold); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #000; font-weight: bold;">1</button>
+              <button
+                style="background: rgba(255,255,255,0.1); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #fff; cursor: not-allowed; opacity: 0.5;">Next</button>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section id="sec-profile" class="tab-section" style="display: none;">
-        <h3 style="color: var(--clr-gold); margin-top:0;">Profile Details</h3>
-        
-        <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px;">
-              <h4 style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;"><i class="fa-solid fa-user-pen"></i> Personal Information</h4>
-              
+        <section id="sec-profile" class="tab-section" style="display: none;">
+          <h3 style="color: var(--clr-gold); margin-top:0;">Profile Details</h3>
+
+          <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+            <div
+              style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px;">
+              <h4
+                style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+                <i class="fa-solid fa-user-pen"></i> Personal Information</h4>
+
               <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
-                  <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--clr-gold);">
-                      <i class="fa-solid fa-user"></i>
-                  </div>
-                  <div>
-                      <button style="background: rgba(255,255,255,0.1); color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 0.5rem; display: block;">Upload Photo</button>
-                      <span style="font-size: 0.8rem; color: var(--clr-muted);">JPG, GIF or PNG. Max size 2MB</span>
-                  </div>
+                <div
+                  style="width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--clr-gold);">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <div>
+                  <button
+                    style="background: rgba(255,255,255,0.1); color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer; margin-bottom: 0.5rem; display: block;">Upload
+                    Photo</button>
+                  <span style="font-size: 0.8rem; color: var(--clr-muted);">JPG, GIF or PNG. Max size 2MB</span>
+                </div>
               </div>
-              
+
               <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
                 <div style="flex: 1; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">First Name</label>
-                  <input type="text" value="John" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; transition: border 0.3s;">
+                  <input type="text" value="John"
+                    style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; transition: border 0.3s;">
                 </div>
                 <div style="flex: 1; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Last Name</label>
-                  <input type="text" value="Doe" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                  <input type="text" value="Doe"
+                    style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                 </div>
               </div>
-              
+
               <div style="margin-bottom: 1.5rem;">
                 <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Email Address</label>
-                <input type="email" value="johndoe@example.com" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                <input type="email" value="johndoe@example.com"
+                  style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
               </div>
-              
+
               <div style="margin-bottom: 1.5rem;">
                 <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Phone Number</label>
-                <input type="tel" value="+41 78 123 45 67" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                <input type="tel" value="+41 78 123 45 67"
+                  style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
               </div>
-              
-              <button style="background:var(--clr-gold); color:#000; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer;"><i class="fa-solid fa-floppy-disk"></i> Save Changes</button>
+
+              <button
+                style="background:var(--clr-gold); color:#000; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer;"><i
+                  class="fa-solid fa-floppy-disk"></i> Save Changes</button>
             </div>
-            
-            <div style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px; height: fit-content;">
-              <h4 style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;"><i class="fa-solid fa-location-dot"></i> Shipping Address</h4>
-              
+
+            <div
+              style="flex: 1; min-width: 300px; background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px; height: fit-content;">
+              <h4
+                style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+                <i class="fa-solid fa-location-dot"></i> Shipping Address</h4>
+
               <div style="margin-bottom: 1.5rem;">
                 <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Street Address</label>
-                <input type="text" value="123 Watchmaker Lane" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                <input type="text" value="123 Watchmaker Lane"
+                  style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
               </div>
-              
+
               <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
                 <div style="flex: 2; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">City</label>
-                  <input type="text" value="Geneva" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                  <input type="text" value="Geneva"
+                    style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                 </div>
                 <div style="flex: 1; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Zip / Postal</label>
-                  <input type="text" value="1204" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                  <input type="text" value="1204"
+                    style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                 </div>
               </div>
-              
+
               <div style="margin-bottom: 2rem;">
                 <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Country</label>
-                <select style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; cursor: pointer;">
-                    <option value="in" style="background:#0f121a;" selected>India</option>
-                    <option value="ch" style="background:#0f121a;">Switzerland</option>
-                    <option value="fr" style="background:#0f121a;">France</option>
-                    <option value="it" style="background:#0f121a;">Italy</option>
-                    <option value="uk" style="background:#0f121a;">United Kingdom</option>
-                    <option value="us" style="background:#0f121a;">United States</option>
+                <select
+                  style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; cursor: pointer;">
+                  <option value="in" style="background:#0f121a;" selected>India</option>
+                  <option value="ch" style="background:#0f121a;">Switzerland</option>
+                  <option value="fr" style="background:#0f121a;">France</option>
+                  <option value="it" style="background:#0f121a;">Italy</option>
+                  <option value="uk" style="background:#0f121a;">United Kingdom</option>
+                  <option value="us" style="background:#0f121a;">United States</option>
                 </select>
               </div>
-              
-              <button style="background:rgba(255,255,255,0.1); color:#fff; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer;"><i class="fa-solid fa-map-location-dot"></i> Update Address</button>
-            </div>
-        </div>
-      </section>
 
-      <section id="sec-wishlist" class="tab-section" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+              <button
+                style="background:rgba(255,255,255,0.1); color:#fff; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer;"><i
+                  class="fa-solid fa-map-location-dot"></i> Update Address</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="sec-wishlist" class="tab-section" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
             <h3 style="color: var(--clr-gold); margin-top:0; margin-bottom:0;">My Wishlist (5 items)</h3>
-            <button style="background: transparent; color: var(--clr-silver); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 0.5rem 1rem; cursor: pointer;"><i class="fa-solid fa-trash-can"></i> Clear Wishlist</button>
-        </div>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
-          
-          <div class="wishlist-card">
-            <button style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-heart"></i></button>
-            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                <img src="assets/images/classique_custom.webp" style="height: 100%; border-radius: 4px; object-fit: contain;">
-            </div>
-            <h4 style="margin: 0 0 0.5rem;">Classique I</h4>
-            <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$12,400</p>
-            <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i> In Stock</p>
-            <button style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            <button
+              style="background: transparent; color: var(--clr-silver); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 0.5rem 1rem; cursor: pointer;"><i
+                class="fa-solid fa-trash-can"></i> Clear Wishlist</button>
           </div>
-          
-          <div class="wishlist-card">
-            <button style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-heart"></i></button>
-            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                <img src="assets/images/aqua_custom.webp" style="height: 100%; border-radius: 4px; object-fit: contain;">
+
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+
+            <div class="wishlist-card">
+              <button
+                style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i
+                  class="fa-solid fa-heart"></i></button>
+              <div
+                style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <img src="assets/images/classique_custom.webp"
+                  style="height: 100%; border-radius: 4px; object-fit: contain;">
+              </div>
+              <h4 style="margin: 0 0 0.5rem;">Classique I</h4>
+              <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$12,400</p>
+              <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i
+                  class="fa-solid fa-circle-check"></i> In Stock</p>
+              <button
+                style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i
+                  class="fa-solid fa-cart-plus"></i> Add to Cart</button>
             </div>
-            <h4 style="margin: 0 0 0.5rem;">Aqua Diver 300</h4>
-            <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$15,900</p>
-            <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i> In Stock</p>
-            <button style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          
-          <div class="wishlist-card">
-            <button style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-heart"></i></button>
-            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                <img src="assets/images/collection-tourbillon.webp" style="height: 100%; border-radius: 4px; object-fit: contain;">
+
+            <div class="wishlist-card">
+              <button
+                style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i
+                  class="fa-solid fa-heart"></i></button>
+              <div
+                style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <img src="assets/images/aqua_custom.webp"
+                  style="height: 100%; border-radius: 4px; object-fit: contain;">
+              </div>
+              <h4 style="margin: 0 0 0.5rem;">Aqua Diver 300</h4>
+              <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$15,900</p>
+              <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i
+                  class="fa-solid fa-circle-check"></i> In Stock</p>
+              <button
+                style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i
+                  class="fa-solid fa-cart-plus"></i> Add to Cart</button>
             </div>
-            <h4 style="margin: 0 0 0.5rem;">Tourbillon Limited</h4>
-            <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$85,000</p>
-            <p style="color: #e74c3c; font-size: 0.8rem; margin-bottom: 1rem;"><i class="fa-solid fa-circle-xmark"></i> Out of Stock</p>
-            <button style="width: 100%; background: rgba(255,255,255,0.1); color: #fff; padding: 0.6rem; border: none; border-radius: 4px; cursor: not-allowed; font-weight: bold;"><i class="fa-solid fa-bell"></i> Notify Me</button>
-          </div>
-          
-          <div class="wishlist-card">
-            <button style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-heart"></i></button>
-            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                <img src="assets/images/collection-chronograph.webp" style="height: 100%; border-radius: 4px; object-fit: contain;">
+
+            <div class="wishlist-card">
+              <button
+                style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i
+                  class="fa-solid fa-heart"></i></button>
+              <div
+                style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <img src="assets/images/collection-tourbillon.webp"
+                  style="height: 100%; border-radius: 4px; object-fit: contain;">
+              </div>
+              <h4 style="margin: 0 0 0.5rem;">Tourbillon Limited</h4>
+              <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$85,000</p>
+              <p style="color: #e74c3c; font-size: 0.8rem; margin-bottom: 1rem;"><i
+                  class="fa-solid fa-circle-xmark"></i> Out of Stock</p>
+              <button
+                style="width: 100%; background: rgba(255,255,255,0.1); color: #fff; padding: 0.6rem; border: none; border-radius: 4px; cursor: not-allowed; font-weight: bold;"><i
+                  class="fa-solid fa-bell"></i> Notify Me</button>
             </div>
-            <h4 style="margin: 0 0 0.5rem;">Chrono Racing</h4>
-            <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$8,500</p>
-            <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i> In Stock</p>
-            <button style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
-          </div>
-          
-          <div class="wishlist-card">
-            <button style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-heart"></i></button>
-            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+
+            <div class="wishlist-card">
+              <button
+                style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i
+                  class="fa-solid fa-heart"></i></button>
+              <div
+                style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                <img src="assets/images/collection-chronograph.webp"
+                  style="height: 100%; border-radius: 4px; object-fit: contain;">
+              </div>
+              <h4 style="margin: 0 0 0.5rem;">Chrono Racing</h4>
+              <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$8,500</p>
+              <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i
+                  class="fa-solid fa-circle-check"></i> In Stock</p>
+              <button
+                style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i
+                  class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+            </div>
+
+            <div class="wishlist-card">
+              <button
+                style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; color: #ff3b30; font-size: 1.2rem; cursor: pointer;"><i
+                  class="fa-solid fa-heart"></i></button>
+              <div
+                style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
                 <img src="assets/images/new_watch.webp" style="height: 100%; border-radius: 4px; object-fit: contain;">
+              </div>
+              <h4 style="margin: 0 0 0.5rem;">Pilot GMT</h4>
+              <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$11,200</p>
+              <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i
+                  class="fa-solid fa-circle-check"></i> In Stock</p>
+              <button
+                style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i
+                  class="fa-solid fa-cart-plus"></i> Add to Cart</button>
             </div>
-            <h4 style="margin: 0 0 0.5rem;">Pilot GMT</h4>
-            <p style="color: var(--clr-gold); margin: 0 0 1rem; font-weight: bold;">$11,200</p>
-            <p style="color: #2ecc71; font-size: 0.8rem; margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i> In Stock</p>
-            <button style="width: 100%; background: var(--clr-gold); color: #000; padding: 0.6rem; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+
           </div>
-          
-        </div>
-      </section>
+        </section>
 
-      <section id="sec-notifications" class="tab-section" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <section id="sec-notifications" class="tab-section" style="display: none;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
             <h3 style="color: var(--clr-gold); margin-top:0; margin-bottom:0;">Notifications</h3>
-            <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem;">2 Unread</span>
-        </div>
-        
-        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
-          <li style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 3px solid var(--clr-gold); display: flex; gap: 1.5rem; align-items: flex-start;">
-            <div style="background: rgba(255,215,0,0.1); color: var(--clr-gold); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span
+              style="background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.8rem;">2
+              Unread</span>
+          </div>
+
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+            <li
+              style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 3px solid var(--clr-gold); display: flex; gap: 1.5rem; align-items: flex-start;">
+              <div
+                style="background: rgba(255,215,0,0.1); color: var(--clr-gold); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-box"></i>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
+              </div>
+              <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <h4 style="margin: 0; color: #fff;">Order Shipped</h4>
-                    <span style="color: var(--clr-muted); font-size: 0.8rem;">Just now</span>
+                  <h4 style="margin: 0; color: #fff;">Order Shipped</h4>
+                  <span style="color: var(--clr-muted); font-size: 0.8rem;">Just now</span>
                 </div>
-                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">Your order <b>#ORD-7901</b> has been shipped and is on its way. Track your package <a href="#" style="color: var(--clr-gold);">here</a>.</p>
-            </div>
-          </li>
-          
-          <li style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 3px solid var(--clr-gold); display: flex; gap: 1.5rem; align-items: flex-start;">
-            <div style="background: rgba(255,215,0,0.1); color: var(--clr-gold); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">Your order <b>#ORD-7901</b> has been
+                  shipped and is on its way. Track your package <a href="#" style="color: var(--clr-gold);">here</a>.
+                </p>
+              </div>
+            </li>
+
+            <li
+              style="padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 3px solid var(--clr-gold); display: flex; gap: 1.5rem; align-items: flex-start;">
+              <div
+                style="background: rgba(255,215,0,0.1); color: var(--clr-gold); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-tag"></i>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
+              </div>
+              <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <h4 style="margin: 0; color: #fff;">Exclusive Invitation</h4>
-                    <span style="color: var(--clr-muted); font-size: 0.8rem;">2 days ago</span>
+                  <h4 style="margin: 0; color: #fff;">Exclusive Invitation</h4>
+                  <span style="color: var(--clr-muted); font-size: 0.8rem;">2 days ago</span>
                 </div>
-                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">You are invited to the Stackly private viewing event in Geneva. <a href="#" style="color: var(--clr-gold);">RSVP now</a>.</p>
-            </div>
-          </li>
-          
-          <li style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; display: flex; gap: 1.5rem; align-items: flex-start;">
-            <div style="background: rgba(255,255,255,0.05); color: var(--clr-silver); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">You are invited to the Stackly
+                  private viewing event in Geneva. <a href="#" style="color: var(--clr-gold);">RSVP now</a>.</p>
+              </div>
+            </li>
+
+            <li
+              style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; display: flex; gap: 1.5rem; align-items: flex-start;">
+              <div
+                style="background: rgba(255,255,255,0.05); color: var(--clr-silver); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
+              </div>
+              <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <h4 style="margin: 0; color: #fff;">Security Alert</h4>
-                    <span style="color: var(--clr-muted); font-size: 0.8rem;">1 week ago</span>
+                  <h4 style="margin: 0; color: #fff;">Security Alert</h4>
+                  <span style="color: var(--clr-muted); font-size: 0.8rem;">1 week ago</span>
                 </div>
-                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">New login detected from a new device (Mac OS). If this was you, you can ignore this message.</p>
-            </div>
-          </li>
-          
-          <li style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; display: flex; gap: 1.5rem; align-items: flex-start;">
-            <div style="background: rgba(255,255,255,0.05); color: var(--clr-silver); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">New login detected from a new device
+                  (Mac OS). If this was you, you can ignore this message.</p>
+              </div>
+            </li>
+
+            <li
+              style="padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 8px; display: flex; gap: 1.5rem; align-items: flex-start;">
+              <div
+                style="background: rgba(255,255,255,0.05); color: var(--clr-silver); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-gift"></i>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
+              </div>
+              <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                    <h4 style="margin: 0; color: #fff;">Welcome to Stackly</h4>
-                    <span style="color: var(--clr-muted); font-size: 0.8rem;">Sep 10, 2026</span>
+                  <h4 style="margin: 0; color: #fff;">Welcome to Stackly</h4>
+                  <span style="color: var(--clr-muted); font-size: 0.8rem;">Sep 10, 2026</span>
                 </div>
-                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">Welcome to the maison. Enjoy a complimentary leather watch roll with your first purchase.</p>
-            </div>
-          </li>
-        </ul>
-      </section>
+                <p style="margin: 0; color: var(--clr-silver); font-size: 0.95rem;">Welcome to the maison. Enjoy a
+                  complimentary leather watch roll with your first purchase.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
 
-      <section id="sec-settings" class="tab-section" style="display: none;">
-        <h3 style="color: var(--clr-gold); margin-top:0; margin-bottom: 2rem;">Account Settings</h3>
-        
-        <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+        <section id="sec-settings" class="tab-section" style="display: none;">
+          <h3 style="color: var(--clr-gold); margin-top:0; margin-bottom: 2rem;">Account Settings</h3>
+
+          <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 300px; max-width: 600px;">
-                <!-- Security Settings -->
-                <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-                  <h4 style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;"><i class="fa-solid fa-shield"></i> Security & Password</h4>
-                  
-                  <div style="margin-bottom: 1.5rem;">
-                    <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Current Password</label>
-                    <input type="password" placeholder="••••••••" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+              <!-- Security Settings -->
+              <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                <h4
+                  style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+                  <i class="fa-solid fa-shield"></i> Security & Password</h4>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Current Password</label>
+                  <input type="password" placeholder="••••••••"
+                    style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                  <div style="flex: 1; min-width: 150px;">
+                    <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">New Password</label>
+                    <input type="password" placeholder="New Password"
+                      style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                   </div>
-                  <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                    <div style="flex: 1; min-width: 150px;">
-                      <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">New Password</label>
-                      <input type="password" placeholder="New Password" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
-                    </div>
-                    <div style="flex: 1; min-width: 150px;">
-                      <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Confirm Password</label>
-                      <input type="password" placeholder="Confirm Password" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
-                    </div>
-                  </div>
-                  <button style="background:rgba(255,255,255,0.1); color:#fff; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer; margin-bottom: 2rem;"><i class="fa-solid fa-key"></i> Update Password</button>
-                  
-                  <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                    <div>
-                        <h5 style="margin: 0 0 0.25rem 0; color: #fff;">Two-Factor Authentication</h5>
-                        <p style="margin: 0; color: var(--clr-muted); font-size: 0.85rem;">Add an extra layer of security to your account.</p>
-                    </div>
-                    <button style="background:var(--clr-gold); color:#000; padding:0.5rem 1rem; border:none; border-radius:20px; font-weight:bold; cursor:pointer;">Enable</button>
+                  <div style="flex: 1; min-width: 150px;">
+                    <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Confirm
+                      Password</label>
+                    <input type="password" placeholder="Confirm Password"
+                      style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                   </div>
                 </div>
+                <button
+                  style="background:rgba(255,255,255,0.1); color:#fff; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer; margin-bottom: 2rem;"><i
+                    class="fa-solid fa-key"></i> Update Password</button>
+
+                <div
+                  style="display: flex; justify-content: space-between; align-items: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                  <div>
+                    <h5 style="margin: 0 0 0.25rem 0; color: #fff;">Two-Factor Authentication</h5>
+                    <p style="margin: 0; color: var(--clr-muted); font-size: 0.85rem;">Add an extra layer of security to
+                      your account.</p>
+                  </div>
+                  <button
+                    style="background:var(--clr-gold); color:#000; padding:0.5rem 1rem; border:none; border-radius:20px; font-weight:bold; cursor:pointer;">Enable</button>
+                </div>
+              </div>
             </div>
-            
+
             <div style="flex: 1; min-width: 300px; max-width: 600px;">
-                <!-- Preferences Settings -->
-                <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-                  <h4 style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;"><i class="fa-solid fa-sliders"></i> Preferences</h4>
-                  
-                  <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h5 style="margin: 0 0 0.25rem 0; color: #fff;">Email Notifications</h5>
-                        <p style="margin: 0; color: var(--clr-muted); font-size: 0.85rem;">Receive updates on orders and new collections.</p>
-                    </div>
-                    <input type="checkbox" checked style="width:20px; height:20px; cursor: pointer;">
+              <!-- Preferences Settings -->
+              <div style="background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+                <h4
+                  style="margin-top:0; margin-bottom:1.5rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1rem;">
+                  <i class="fa-solid fa-sliders"></i> Preferences</h4>
+
+                <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <h5 style="margin: 0 0 0.25rem 0; color: #fff;">Email Notifications</h5>
+                    <p style="margin: 0; color: var(--clr-muted); font-size: 0.85rem;">Receive updates on orders and new
+                      collections.</p>
                   </div>
-                  
-                  <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-                    <div>
-                        <h5 style="margin: 0 0 0.25rem 0; color: #fff;">SMS Alerts for Delivery</h5>
-                        <p style="margin: 0; color: var(--clr-muted); font-size: 0.85rem;">Get real-time tracking updates via SMS.</p>
-                    </div>
-                    <input type="checkbox" style="width:20px; height:20px; cursor: pointer;">
-                  </div>
-                  
-                  <div style="margin-bottom: 1.5rem;">
-                    <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Preferred Currency</label>
-                    <select style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; cursor: pointer;">
-                        <option value="usd" style="background:#0f121a;">USD ($)</option>
-                        <option value="eur" style="background:#0f121a;">EUR (€)</option>
-                        <option value="chf" style="background:#0f121a;">CHF</option>
-                        <option value="gbp" style="background:#0f121a;">GBP (£)</option>
-                    </select>
-                  </div>
+                  <input type="checkbox" checked style="width:20px; height:20px; cursor: pointer;">
                 </div>
-                
-                <!-- Danger Zone -->
-                <div style="background: rgba(255,59,48,0.05); border: 1px solid rgba(255,59,48,0.2); padding: 2rem; border-radius: 8px;">
-                  <h4 style="margin-top:0; margin-bottom:1rem; color: #ff3b30;"><i class="fa-solid fa-triangle-exclamation"></i> Danger Zone</h4>
-                  <p style="margin: 0 0 1.5rem 0; color: var(--clr-silver); font-size: 0.9rem;">Once you delete your account, there is no going back. Please be certain.</p>
-                  <button style="background: rgba(255,59,48,0.2); color: #ff3b30; padding: 0.8rem 1.5rem; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Delete Account</button>
+
+                <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <h5 style="margin: 0 0 0.25rem 0; color: #fff;">SMS Alerts for Delivery</h5>
+                    <p style="margin: 0; color: var(--clr-muted); font-size: 0.85rem;">Get real-time tracking updates
+                      via SMS.</p>
+                  </div>
+                  <input type="checkbox" style="width:20px; height:20px; cursor: pointer;">
                 </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                  <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Preferred
+                    Currency</label>
+                  <select
+                    style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; cursor: pointer;">
+                    <option value="usd" style="background:#0f121a;">USD ($)</option>
+                    <option value="eur" style="background:#0f121a;">EUR (€)</option>
+                    <option value="chf" style="background:#0f121a;">CHF</option>
+                    <option value="gbp" style="background:#0f121a;">GBP (£)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Danger Zone -->
+              <div
+                style="background: rgba(255,59,48,0.05); border: 1px solid rgba(255,59,48,0.2); padding: 2rem; border-radius: 8px;">
+                <h4 style="margin-top:0; margin-bottom:1rem; color: #ff3b30;"><i
+                    class="fa-solid fa-triangle-exclamation"></i> Danger Zone</h4>
+                <p style="margin: 0 0 1.5rem 0; color: var(--clr-silver); font-size: 0.9rem;">Once you delete your
+                  account, there is no going back. Please be certain.</p>
+                <button
+                  style="background: rgba(255,59,48,0.2); color: #ff3b30; padding: 0.8rem 1.5rem; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Delete
+                  Account</button>
+              </div>
             </div>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section id="sec-support" class="tab-section" style="display: none;">
-        <h3 style="color: var(--clr-gold); margin-top:0;">Support & Concierge</h3>
-        <p style="color: var(--clr-silver); margin-bottom: 2rem;">Need help with your timepiece? Contact our dedicated concierge service.</p>
-        <div style="display: grid; gap: 1rem; max-width: 600px;">
-          <input type="text" placeholder="Subject" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
-          <textarea placeholder="How can we assist you?" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; height:120px;"></textarea>
-          <button style="background:var(--clr-gold); color:#000; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer;">Send Message</button>
-        </div>
-      </section>
+        <section id="sec-support" class="tab-section" style="display: none;">
+          <h3 style="color: var(--clr-gold); margin-top:0;">Support & Concierge</h3>
+          <p style="color: var(--clr-silver); margin-bottom: 2rem;">Need help with your timepiece? Contact our dedicated
+            concierge service.</p>
+          <div style="display: grid; gap: 1rem; max-width: 600px;">
+            <input type="text" placeholder="Subject"
+              style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
+            <textarea placeholder="How can we assist you?"
+              style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; height:120px;"></textarea>
+            <button
+              style="background:var(--clr-gold); color:#000; padding:0.8rem 1.5rem; border:none; border-radius:4px; font-weight:bold; cursor:pointer;">Send
+              Message</button>
+          </div>
+        </section>
 
-    </div>
-  </main>
-</div>
+      </div>
+    </main>
+  </div>
 
-<script>
-  // Get email from local storage
-  const email = localStorage.getItem('userEmail');
-  if (email) {
-    document.getElementById('user-email').textContent = email;
-  } else {
-    document.getElementById('user-email').textContent = 'Guest User';
-  }
+  <script>
+    // Get email from local storage
+    const email = localStorage.getItem('userEmail');
+    if (email) {
+      document.getElementById('user-email').textContent = email;
+    } else {
+      document.getElementById('user-email').textContent = 'Guest User';
+    }
 
-  function logout() {
-    localStorage.removeItem('userEmail');
-    localStorage.removeItem('userRole');
-    window.location.href = 'login.html';
-  }
+    function logout() {
+      localStorage.removeItem('userEmail');
+      localStorage.removeItem('userRole');
+      window.location.href = 'login.html';
+    }
 
-  function showSection(sectionId, element) {
-    // Hide all sections
-    const sections = document.querySelectorAll('.tab-section');
-    sections.forEach(sec => sec.style.display = 'none');
-    
-    // Remove active class from all links
-    const links = document.querySelectorAll('.sidebar-nav a');
-    links.forEach(link => link.classList.remove('active'));
-    
-    // Show selected section
-    document.getElementById('sec-' + sectionId).style.display = 'block';
-    
-    // Add active class to clicked link
-    element.classList.add('active');
-  }
+    function showSection(sectionId, element) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.tab-section');
+      sections.forEach(sec => sec.style.display = 'none');
 
-  function toggleSidebar() {
-    document.querySelector('.sidebar').classList.toggle('open');
-    document.querySelector('.sidebar-overlay').classList.toggle('active');
-  }
+      // Remove active class from all links
+      const links = document.querySelectorAll('.sidebar-nav a');
+      links.forEach(link => link.classList.remove('active'));
 
-  // Auto-close sidebar on mobile when a link is clicked
-  document.querySelectorAll('.sidebar-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 991) {
-        toggleSidebar();
-      }
+      // Show selected section
+      document.getElementById('sec-' + sectionId).style.display = 'block';
+
+      // Add active class to clicked link
+      element.classList.add('active');
+    }
+
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('open');
+      document.querySelector('.sidebar-overlay').classList.toggle('active');
+    }
+
+    // Auto-close sidebar on mobile when a link is clicked
+    document.querySelectorAll('.sidebar-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 991) {
+          toggleSidebar();
+        }
+      });
     });
-  });
-</script>
+  </script>
 
 
   <!-- Scripts for custom cursor and animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
+
 </html>
