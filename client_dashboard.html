@@ -58,6 +58,7 @@
       flex: 1;
       display: flex;
       flex-direction: column;
+      min-width: 0; /* Fix parent flex overflow */
     }
     .dashboard-navbar {
       height: 80px;
@@ -88,6 +89,8 @@
       padding: 3rem;
       flex: 1;
       overflow-y: auto;
+      min-width: 0;
+      box-sizing: border-box; /* Fix flex child overflow */
     }
     .welcome-card {
       background: rgba(255, 255, 255, 0.03);
@@ -102,11 +105,81 @@
       font-size: 1.8rem;
     }
     .tab-section {
+      min-width: 0;
+      width: 100%;
       animation: fadeIn 0.3s ease-in-out;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+  
+    
+    /* Custom Scrollbar for tables */
+    .table-wrapper {
+      overflow-x: auto;
+      width: 100%;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 5px;
+    }
+    .table-wrapper::-webkit-scrollbar {
+      height: 8px;
+    }
+    .table-wrapper::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+    }
+    .table-wrapper::-webkit-scrollbar-thumb {
+      background: var(--clr-gold);
+      border-radius: 4px;
+    }
+    
+    /* Responsive Styles */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      backdrop-filter: blur(2px);
+    }
+    .sidebar-overlay.active {
+      display: block;
+    }
+    
+    @media (max-width: 991px) {
+      .sidebar-toggle {
+        display: block !important;
+      }
+      .sidebar {
+        position: fixed;
+        left: -280px;
+        top: 0;
+        bottom: 0;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+      }
+      .sidebar.open {
+        left: 0;
+      }
+      .dashboard-navbar {
+        padding: 0 1.5rem;
+      }
+      .dashboard-content {
+        padding: 1.5rem;
+      }
+    }
+    @media (max-width: 576px) {
+      .dashboard-navbar h2 {
+        font-size: 1.2rem;
+      }
+      .user-email {
+        display: none; /* Hide email on very small screens to save space */
+      }
+      .dashboard-content {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -115,6 +188,7 @@
 
 
 <div class="dashboard-layout">
+  <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
   <!-- Sidebar -->
   <aside class="sidebar">
     <div style="margin-bottom: 2.5rem;">
@@ -143,7 +217,10 @@
   <main class="dashboard-main">
     <!-- Navbar -->
     <nav class="dashboard-navbar">
-      <h2>Client Panel</h2>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="sidebar-toggle" onclick="toggleSidebar()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;"><i class="fa-solid fa-bars"></i></button>
+        <h2>Client Panel</h2>
+      </div>
       <div class="navbar-right">
         <span class="user-email" id="user-email">loading...</span>
       </div>
@@ -195,14 +272,14 @@
         </section>
       
       <section id="sec-orders" class="tab-section" style="display: none;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
             <h3 style="color: var(--clr-gold); margin-top:0;">My Orders</h3>
             <div style="display: flex; gap: 1rem;">
                 <input type="text" placeholder="Search orders..." style="padding: 0.5rem 1rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: #fff;">
                 <button style="background: rgba(255,255,255,0.1); color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Filter</button>
             </div>
         </div>
-        <table style="width: 100%; text-align: left; border-collapse: collapse; border: 1px solid rgba(255,255,255,0.1);">
+        <div class="table-wrapper"><table style="min-width: 600px; width: 100%; text-align: left; border-collapse: collapse; border: 1px solid rgba(255,255,255,0.1);">
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
             <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Order ID</th>
             <th style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--clr-silver);">Product</th>
@@ -243,7 +320,7 @@
             <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1);">$8,500</td>
             <td style="padding: 1rem; border: 1px solid rgba(255,255,255,0.1); text-align: right;"><button style="background: transparent; color: var(--clr-silver); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; padding: 0.4rem 0.8rem; cursor: pointer;">Details</button></td>
           </tr>
-        </table>
+        </table></div>
         
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; color: var(--clr-silver); font-size: 0.9rem;">
             <span>Showing 1 to 4 of 4 entries</span>
@@ -272,12 +349,12 @@
                   </div>
               </div>
               
-              <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                <div style="flex: 1;">
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="flex: 1; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">First Name</label>
                   <input type="text" value="John" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; transition: border 0.3s;">
                 </div>
-                <div style="flex: 1;">
+                <div style="flex: 1; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Last Name</label>
                   <input type="text" value="Doe" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                 </div>
@@ -304,12 +381,12 @@
                 <input type="text" value="123 Watchmaker Lane" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
               </div>
               
-              <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                <div style="flex: 2;">
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="flex: 2; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">City</label>
                   <input type="text" value="Geneva" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                 </div>
-                <div style="flex: 1;">
+                <div style="flex: 1; min-width: 150px;">
                   <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Zip / Postal</label>
                   <input type="text" value="1204" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                 </div>
@@ -318,6 +395,7 @@
               <div style="margin-bottom: 2rem;">
                 <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Country</label>
                 <select style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px; cursor: pointer;">
+                    <option value="in" style="background:#0f121a;" selected>India</option>
                     <option value="ch" style="background:#0f121a;">Switzerland</option>
                     <option value="fr" style="background:#0f121a;">France</option>
                     <option value="it" style="background:#0f121a;">Italy</option>
@@ -408,7 +486,7 @@
             <div style="background: rgba(255,215,0,0.1); color: var(--clr-gold); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-box"></i>
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                     <h4 style="margin: 0; color: #fff;">Order Shipped</h4>
                     <span style="color: var(--clr-muted); font-size: 0.8rem;">Just now</span>
@@ -421,7 +499,7 @@
             <div style="background: rgba(255,215,0,0.1); color: var(--clr-gold); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-tag"></i>
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                     <h4 style="margin: 0; color: #fff;">Exclusive Invitation</h4>
                     <span style="color: var(--clr-muted); font-size: 0.8rem;">2 days ago</span>
@@ -434,7 +512,7 @@
             <div style="background: rgba(255,255,255,0.05); color: var(--clr-silver); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                     <h4 style="margin: 0; color: #fff;">Security Alert</h4>
                     <span style="color: var(--clr-muted); font-size: 0.8rem;">1 week ago</span>
@@ -447,7 +525,7 @@
             <div style="background: rgba(255,255,255,0.05); color: var(--clr-silver); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
                 <i class="fa-solid fa-gift"></i>
             </div>
-            <div style="flex: 1;">
+            <div style="flex: 1; min-width: 150px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                     <h4 style="margin: 0; color: #fff;">Welcome to Stackly</h4>
                     <span style="color: var(--clr-muted); font-size: 0.8rem;">Sep 10, 2026</span>
@@ -471,12 +549,12 @@
                     <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Current Password</label>
                     <input type="password" placeholder="••••••••" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                   </div>
-                  <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
-                    <div style="flex: 1;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="flex: 1; min-width: 150px;">
                       <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">New Password</label>
                       <input type="password" placeholder="New Password" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                     </div>
-                    <div style="flex: 1;">
+                    <div style="flex: 1; min-width: 150px;">
                       <label style="display:block; color:var(--clr-silver); margin-bottom:0.5rem;">Confirm Password</label>
                       <input type="password" placeholder="Confirm Password" style="width:100%; padding:0.8rem; background:rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.1); color:#fff; border-radius:4px;">
                     </div>
@@ -579,6 +657,20 @@
     // Add active class to clicked link
     element.classList.add('active');
   }
+
+  function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('open');
+    document.querySelector('.sidebar-overlay').classList.toggle('active');
+  }
+
+  // Auto-close sidebar on mobile when a link is clicked
+  document.querySelectorAll('.sidebar-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 991) {
+        toggleSidebar();
+      }
+    });
+  });
 </script>
 
 
