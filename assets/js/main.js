@@ -515,7 +515,10 @@ window.showToast = showToast;
 (function initLenis() {
   if (typeof Lenis === 'undefined') return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reducedMotion) return;
+  if (reducedMotion) {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return;
+  }
 
   const lenis = new Lenis({
     lerp: 0.07,             // Premium, buttery smooth motion
@@ -528,17 +531,19 @@ window.showToast = showToast;
   // Expose globally so other scripts can use lenis.stop() / lenis.start()
   window._lenis = lenis;
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-
   // Sync with GSAP ScrollTrigger if available
   if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
     lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
     gsap.ticker.lagSmoothing(0);
+  } else {
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
   }
 
   // Pause smooth scroll when mobile nav is open (prevents conflict)
