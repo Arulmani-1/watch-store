@@ -184,6 +184,14 @@ select {
   font-size: clamp(2rem, 5vw, 3.5rem);
   letter-spacing: 0.25em;
   color: var(--clr-gold);
+  display: flex;
+  justify-content: center;
+}
+
+.loader-logo img {
+  height: 80px;
+  width: auto;
+  display: block;
 }
 
 .loader-bar {
