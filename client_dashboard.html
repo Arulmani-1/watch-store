@@ -171,11 +171,12 @@
       }
     }
     @media (max-width: 576px) {
-      .dashboard-navbar h2 {
-        font-size: 1.2rem;
+      .panel-title {
+        display: none;
       }
       .user-email {
-        display: none; /* Hide email on very small screens to save space */
+        display: block; 
+        font-size: 0.85rem;
       }
       .dashboard-content {
         padding: 1rem;
@@ -219,7 +220,7 @@
     <nav class="dashboard-navbar">
       <div style="display: flex; align-items: center; gap: 1rem;">
         <button class="sidebar-toggle" onclick="toggleSidebar()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; display: none;"><i class="fa-solid fa-bars"></i></button>
-        <h2>Client Panel</h2>
+        <h2 class="panel-title">Client Panel</h2>
       </div>
       <div class="navbar-right">
         <span class="user-email" id="user-email">loading...</span>
