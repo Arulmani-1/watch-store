@@ -246,6 +246,14 @@ select {
   letter-spacing: 0.2em;
   color: var(--clr-gold);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 70px;
+  width: auto;
+  display: block;
 }
 
 .nav-logo span {
@@ -1309,7 +1317,14 @@ textarea.form-control {
   letter-spacing: 0.2em;
   color: var(--clr-gold);
   margin-bottom: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-logo img {
+  height: 70px;
+  width: auto;
+  display: block;
 }
 
 .auth-title {
@@ -1493,13 +1508,13 @@ footer {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 2fr;
   gap: clamp(2rem, 4vw, 4rem);
 }
 
 .footer-brand-desc {
-  font-size: 0.88rem;
-  color: var(--clr-muted);
+  font-size: 1rem;
+  color: var(--clr-white);
   line-height: 1.8;
   margin-top: 1rem;
   max-width: 320px;
@@ -1521,8 +1536,8 @@ footer {
 }
 
 .footer-links a {
-  font-size: 0.88rem;
-  color: var(--clr-muted);
+  font-size: 1rem;
+  color: var(--clr-white);
   transition: color var(--tr);
 }
 
@@ -1537,11 +1552,12 @@ footer {
   border-top: 1px solid var(--clr-border);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 1rem;
-  font-size: 0.78rem;
-  color: var(--clr-muted);
+  font-size: 0.9rem;
+  color: var(--clr-white);
 }
 
 .footer-social {
@@ -1557,8 +1573,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--clr-muted);
-  font-size: 0.85rem;
+  color: var(--clr-white);
+  font-size: 1rem;
   transition: color var(--tr), border-color var(--tr), background var(--tr);
 }
 
@@ -1995,4 +2011,49 @@ footer {
 /* Hide login/signup in mobile (hamburger handles it) */
 @media (max-width: 991px) {
   #nav-login-btn, #nav-signup-btn { display: none; }
+}
+/* Footer Newsletter */
+.footer-newsletter-desc {
+  color: var(--clr-silver);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+
+.footer-newsletter-form input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  outline: none;
+  font-family: var(--ff-sans);
+}
+
+.footer-newsletter-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-newsletter-form .btn-subscribe {
+  background-color: #2D68FF;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-newsletter-form .btn-subscribe:hover {
+  background-color: #1a51da;
 }
