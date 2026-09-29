@@ -64,7 +64,7 @@
 
 <div class="page-hero" style="padding-top:var(--nav-h)">
   <div class="page-hero-bg">
-    <img src="assets/images/about-hero-banner.webp" alt="Stackly watch manufacture interior with precision machinery" loading="lazy" width="1200" height="675">
+    <img src="assets/images/about-hero-banner.webp" alt="Cart Banner" loading="lazy">
   </div>
   <div class="page-hero-content">
     <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Cart</span></nav>
@@ -72,81 +72,155 @@
   </div>
 </div>
 
-<section style="background: #fff; padding: 4rem 0;">
-  <div class="section" style="max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 250px 1fr; gap: 3rem;">
-    <!-- Sidebar -->
-    <aside class="shop-sidebar" style="font-family: var(--ff-sans);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-        <h3 style="font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-filter"></i> Filter By</h3>
-        <button style="background: none; border: none; font-size: 0.8rem; color: #888; cursor: pointer;">Clear All</button>
+<section style="padding: 4rem 0; background: #fff;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 350px; gap: 3rem; align-items: start;">
+    
+    <!-- Cart Table Area -->
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-family: var(--ff-sans); font-size: 0.9rem; margin-bottom: 2rem; min-width: 600px;">
+        <thead>
+          <tr style="border-bottom: 2px solid #eaeaea;">
+            <th style="padding: 1rem 0; font-weight: 700;">Product</th>
+            <th style="padding: 1rem 0; font-weight: 700;">Price</th>
+            <th style="padding: 1rem 0; font-weight: 700;">Quantity</th>
+            <th style="padding: 1rem 0; font-weight: 700;">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Item 1 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_1.webp" alt="Classic Silver Dial Watch" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Classic Silver Dial Watch</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹4,999.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹4,999.00</td>
+          </tr>
+          <!-- Item 2 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_2.webp" alt="Black Chronograph Pro" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Black Chronograph Pro</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹6,999.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹6,999.00</td>
+          </tr>
+          <!-- Item 3 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_3.webp" alt="Automatic Skeleton Watch" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Automatic Skeleton Watch</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹12,499.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹12,499.00</td>
+          </tr>
+          <!-- Item 4 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_4.webp" alt="Aurex Royal Gold Edition" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Aurex Royal Gold Edition</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹15,499.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹15,499.00</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: 1rem;">
+        <button style="padding: 0.8rem 1.5rem; font-family: var(--ff-sans); font-weight: 600; border: 1px solid #111; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-rotate-right"></i> Update Cart</button>
+        <button style="padding: 0.8rem 1.5rem; font-family: var(--ff-sans); font-weight: 600; border: 1px solid #111; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-trash-can"></i> Clear Cart</button>
       </div>
-
-      <!-- Brands -->
-      <div class="filter-group" style="margin-bottom: 2rem;">
-        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Brands <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
-        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Fastrack (566)</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Titan (450)</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Rolex (150)</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Tommy Hilfiger (476)</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Rado (358)</label>
+    </div>
+    
+    <!-- Order Summary Area -->
+    <div style="border: 1px solid #eaeaea; padding: 2rem; font-family: var(--ff-sans); font-size: 0.9rem;">
+      <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 2rem;">Order Summary</h3>
+      
+      <!-- Promo code -->
+      <div style="display: flex; border: 1px solid #eaeaea; margin-bottom: 2rem;">
+        <input type="text" placeholder="Add promo code" style="flex: 1; padding: 0.8rem; border: none; outline: none; background: transparent; font-size: 0.85rem;">
+        <button style="background: #111; color: #fff; border: none; padding: 0 1.5rem; font-weight: 600; cursor: pointer;">Apply</button>
+      </div>
+      
+      <!-- Subtotal -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid #eaeaea; font-weight: 600;">
+        <span>Subtotal</span>
+        <span>₹39,996.00</span>
+      </div>
+      
+      <!-- Shipment -->
+      <div style="padding: 1.5rem 0; border-bottom: 1px solid #eaeaea;">
+        <div style="font-weight: 600; margin-bottom: 1rem;">Shipment 1:</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; color: #666; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="shipment"> Local pickup:</label>
+          <span>₹150.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; color: #666; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="shipment" checked> Free shipping</label>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; color: #666; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="shipment"> Flat rate:</label>
+          <span>₹200.00</span>
+        </div>
+        <div style="color: #666; font-size: 0.85rem;">
+          Shipping to <strong>Dhaka</strong><br>
+          <a href="#" style="color: #111; text-decoration: underline; font-weight: 600; margin-top: 0.3rem; display: inline-block;">Change Address</a>
         </div>
       </div>
-
-      <!-- Collection -->
-      <div class="filter-group" style="margin-bottom: 2rem;">
-        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Collection <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
-        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Automatic</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Black & Gold</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Classic</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Fast fit</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Blues</label>
-        </div>
+      
+      <!-- Total -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; font-weight: 700; font-size: 1rem;">
+        <span>Total</span>
+        <span>₹39,996.00</span>
       </div>
+      
+      <a href="checkout.html" style="display: block; width: 100%; text-align: center; background: #111; color: #fff; padding: 1rem; font-weight: 700; text-decoration: none;">Proceed To Checkout</a>
+    </div>
 
-      <!-- Color -->
-      <div class="filter-group" style="margin-bottom: 2rem;">
-        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Color <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
-        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Beige</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Champagne</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Multi-Color/Other</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Orange</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Purple</label>
-        </div>
-      </div>
+  </div>
+</section>
 
-      <!-- Strap -->
-      <div class="filter-group">
-        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Strap <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
-        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Bracelet</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> High-tech ceramic</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Brown Leather</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Stainless steel</label>
-          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> leather</label>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main Content -->
-    <div class="shop-main">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; font-family: var(--ff-sans); font-size: 0.85rem;">
-        <div style="font-weight: 600; font-size: 0.9rem;">Showing all results</div>
-        <div style="display: flex; align-items: center; gap: 1rem; color: #888;">
-          1 / 6 / 11 / 15 
-          <select style="padding: 0.5rem; border: 1px solid #ccc; background: transparent; font-size: 0.85rem; outline: none; cursor: pointer;">
-            <option>Default Sorting</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="new-shop-grid">
-        <article class="new-shop-card">
-          <div class="simg-wrap">
+<!-- You may be interested -->
+<section style="padding: 2rem 0 6rem; background: #fff;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <h2 style="font-family: var(--ff-sans); font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">You May be interested:</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem;">
+      <!-- Product 1 -->
+      <article class="new-shop-card">
+        <div class="simg-wrap">
           <img src="assets/images/shop_watch_1.webp" alt="Classic Silver Dial Watch">
           <div class="hover-actions">
             <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -156,14 +230,14 @@
             <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
           </div>
         </div>
-          <div class="scat">Premium Watch</div>
-          <div class="sname">Classic Silver Dial Watch</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹4,999.00</div>
-        </article>
-        
-        <article class="new-shop-card">
-          <div class="simg-wrap">
+        <div class="scat">Premium Watch</div>
+        <div class="sname">Classic Silver Dial Watch</div>
+        <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+        <div class="sprice">₹4,999.00</div>
+      </article>
+      <!-- Product 2 -->
+      <article class="new-shop-card">
+        <div class="simg-wrap">
           <img src="assets/images/shop_watch_2.webp" alt="Black Chronograph Pro">
           <div class="hover-actions">
             <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -173,14 +247,14 @@
             <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
           </div>
         </div>
-          <div class="scat">Premium Watch</div>
-          <div class="sname">Black Chronograph Pro</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹6,999.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
+        <div class="scat">Premium Watch</div>
+        <div class="sname">Black Chronograph Pro</div>
+        <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+        <div class="sprice">₹6,999.00</div>
+      </article>
+      <!-- Product 3 -->
+      <article class="new-shop-card">
+        <div class="simg-wrap">
           <img src="assets/images/shop_watch_3.webp" alt="Automatic Skeleton Watch">
           <div class="hover-actions">
             <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
@@ -190,314 +264,54 @@
             <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
           </div>
         </div>
-          <div class="scat">Premium Watch</div>
-          <div class="sname">Automatic Skeleton Watch</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹12,499.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
-          <img src="assets/images/shop_watch_4.webp" alt="Aurex Royal Gold Edition">
-          <div class="hover-actions">
-            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
-            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
-          </div>
-        </div>
-          <div class="scat">Luxury Watch</div>
-          <div class="sname">Aurex Royal Gold Edition</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹15,499.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
-          <img src="assets/images/shop_watch_5.webp" alt="Titan Smartwatch Pro">
-          <div class="hover-actions">
-            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
-            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
-          </div>
-        </div>
-          <div class="scat">Sports Watch</div>
-          <div class="sname">Titan Smartwatch Pro</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹6,000.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
-          <img src="assets/images/shop_watch_6.webp" alt="ChronoX Ultra Smart">
-          <div class="hover-actions">
-            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
-            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
-          </div>
-        </div>
-          <div class="scat">Smartwatch</div>
-          <div class="sname">ChronoX Ultra Smart</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹5,999.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
-          <img src="assets/images/shop_watch_7.webp" alt="Urban Classic Black">
-          <div class="hover-actions">
-            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
-            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
-          </div>
-        </div>
-          <div class="scat">Casual Watch</div>
-          <div class="sname">Urban Classic Black</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹2,999.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
-          <img src="assets/images/shop_watch_8.webp" alt="Luxora Diamond Edge">
-          <div class="hover-actions">
-            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
-            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
-          </div>
-        </div>
-          <div class="scat">Luxury Watch</div>
-          <div class="sname">Luxora Diamond Edge</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹8,499.00</div>
-        </article>
-
-        <article class="new-shop-card">
-          <div class="simg-wrap">
-          <img src="assets/images/shop_watch_9.webp" alt="Galaxy Active Fit">
-          <div class="hover-actions">
-            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
-            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
-            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
-            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
-          </div>
-        </div>
-          <div class="scat">Smartwatch</div>
-          <div class="sname">Galaxy Active Fit</div>
-          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
-          <div class="sprice">₹2,499.00</div>
-        </article>
-      </div>
-      
-      <div style="text-align: center; margin-top: 3rem;">
-        <button style="padding: 0.8rem 2rem; background: transparent; border: 1px solid #000; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.3s, color 0.3s;" onmouseover="this.style.background='#000'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#000';">Load More <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.8rem;"></i></button>
-      </div>
+        <div class="scat">Premium Watch</div>
+        <div class="sname">Automatic Skeleton Watch</div>
+        <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+        <div class="sprice">₹12,499.00</div>
+      </article>
     </div>
   </div>
-  
-  <style>
-    .new-shop-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .new-shop-card {
-      border: 1px solid #eaeaea;
-      padding: 1.5rem;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-      font-family: var(--ff-sans);
-      background: #fff;
-    }
-    .new-shop-card:hover {
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      transform: translateY(-5px);
-    }
-    .new-shop-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: contain;
-      margin-bottom: 1rem;
-    }
-    .new-shop-card .scat {
-      font-size: 0.75rem;
-      color: #999;
-      margin-bottom: 0.5rem;
-    }
-    .new-shop-card .sname {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 0.5rem;
-    }
-    .new-shop-card .sstars {
-      color: #d4af37;
-      font-size: 0.8rem;
-      margin-bottom: 0.5rem;
-    }
-    .new-shop-card .sprice {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-    @media (max-width: 1024px) {
-      .new-shop-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .section { grid-template-columns: 1fr !important; }
-      .shop-sidebar { display: none; }
-    }
-    .shop-sidebar input[type="checkbox"] {
-      width: 14px; height: 14px;
-      border: 1px solid #ccc;
-      appearance: none;
-      -webkit-appearance: none;
-      cursor: pointer;
-      border-radius: 2px;
-      position: relative;
-    }
-    .shop-sidebar input[type="checkbox"]:checked {
-      background-color: #222;
-      border-color: #222;
-    }
-  
-    .simg-wrap {
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1rem;
-    }
-    .simg-wrap img {
-      margin-bottom: 0 !important;
-      transition: transform 0.3s;
-    }
-    .new-shop-card:hover .simg-wrap img {
-      transform: scale(1.05);
-    }
-    .hover-actions {
-      position: absolute;
-      bottom: -60px;
-      left: 0;
-      right: 0;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.8rem 0;
-      transition: bottom 0.3s ease;
-    }
-    .new-shop-card:hover .hover-actions {
-      bottom: 0;
-    }
-    .hover-actions button {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: color 0.3s, transform 0.2s;
-    }
-    .hover-actions button:hover {
-      color: var(--clr-gold, #c3b091);
-      transform: scale(1.1);
-    }
-
-  </style>
 </section>
 
 <!-- Features Banner -->
-<section style="background: #fff; padding: 4rem 0; border-top: 1px solid #eaeaea; margin-bottom: 4rem;">
+<section style="background: #fff; padding: 3rem 0; border-top: 1px solid #eaeaea; font-family: var(--ff-sans);">
   <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
       <div style="display: flex; align-items: center; gap: 1rem;">
         <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--clr-gold);"></i>
-        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Safe And Secure<br>Checkout</div>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Safe And Secure<br>Checkout</div>
       </div>
-      <div style="width: 1px; background: #eaeaea; height: 40px;" class="hide-mobile"></div>
       <div style="display: flex; align-items: center; gap: 1rem;">
         <i class="fa-solid fa-award" style="font-size: 2rem; color: var(--clr-gold);"></i>
-        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Premium Quality<br>Guaranteed</div>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Premium Quality<br>Guaranteed</div>
       </div>
-      <div style="width: 1px; background: #eaeaea; height: 40px;" class="hide-mobile"></div>
       <div style="display: flex; align-items: center; gap: 1rem;">
-        <i class="fa-solid fa-arrow-rotate-left" style="font-size: 2rem; color: var(--clr-gold);"></i>
-        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Easy 7 Days Return<br>Policy</div>
+        <i class="fa-solid fa-rotate-left" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Easy 7 Days Return<br>Policy</div>
       </div>
-      <div style="width: 1px; background: #eaeaea; height: 40px;" class="hide-mobile"></div>
       <div style="display: flex; align-items: center; gap: 1rem;">
         <i class="fa-solid fa-truck-fast" style="font-size: 2rem; color: var(--clr-gold);"></i>
-        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Enjoy fast and reliable<br>delivery</div>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Enjoy fast and reliable<br>delivery</div>
       </div>
     </div>
   </div>
-  <style>
-    @media (max-width: 768px) {
-      .hide-mobile { display: none; }
-    }
   
-    .simg-wrap {
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1rem;
+  <style>
+    @media (max-width: 992px) {
+      .section[style*="grid-template-columns: 1fr 350px"] {
+        grid-template-columns: 1fr !important;
+      }
+      .section[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
     }
-    .simg-wrap img {
-      margin-bottom: 0 !important;
-      transition: transform 0.3s;
+    @media (max-width: 576px) {
+      .section[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
     }
-    .new-shop-card:hover .simg-wrap img {
-      transform: scale(1.05);
-    }
-    .hover-actions {
-      position: absolute;
-      bottom: -60px;
-      left: 0;
-      right: 0;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.8rem 0;
-      transition: bottom 0.3s ease;
-    }
-    .new-shop-card:hover .hover-actions {
-      bottom: 0;
-    }
-    .hover-actions button {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: color 0.3s, transform 0.2s;
-    }
-    .hover-actions button:hover {
-      color: var(--clr-gold, #c3b091);
-      transform: scale(1.1);
-    }
-
   </style>
 </section>
-
-<div class="newsletter-banner" data-aos="fade-up">
-  <div class="section-eyebrow" style="justify-content:center">Exclusive Access</div>
-  <h2 class="section-title">Join the inner <em>circle</em></h2>
-  <p class="section-desc centered">Be first to know about limited-edition releases and private previews.</p>
-  <form class="newsletter-form" aria-label="Newsletter subscription">
-    <label for="shop-email" class="sr-only">Email address</label>
-    <input type="email" id="shop-email" placeholder="Your email address" required autocomplete="email">
-    <button type="submit" class="btn-primary">Subscribe</button>
-  </form>
-</div>
 
 <footer>
     <div class="footer-grid">
@@ -519,14 +333,7 @@
           <li><a href="about.html">About us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="blog.html">Blog</a></li>
-                      <li class="dropdown">
-        <a href="#" class="dropdown-toggle active">Pages <i class="fa-solid fa-chevron-down" style="font-size:0.8em;margin-left:4px;"></i></a>
-        <ul class="dropdown-menu">
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="cart.html" class="active">Cart</a></li>
-          <li><a href="checkout.html">Checkout</a></li>
-        </ul>
-      </li>
+                      <li><a href="shop.html">Shop</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -537,6 +344,324 @@
           <li><a href="blog.html">Journal</a></li>
           <li><a href="404.html">404 page</a></li>
           <li><a href="#">FAQ</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Account</h3>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter-col">
+        <h3 class="footer-col-title">NEWSLETTER</h3>
+        <p class="footer-newsletter-desc">Subscribe to receive exclusive horology insights, new collection updates, and Stackly watch releases.</p>
+        <form class="footer-newsletter-form">
+          <input type="email" placeholder="Email Address" required>
+          <button type="submit" class="btn-subscribe">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Stackly SA. All rights reserved. Jura, Switzerland.</span>
+      
+    </div>
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
+<div class="page-hero" style="padding-top:var(--nav-h)">
+  <div class="page-hero-bg">
+    <img src="assets/images/about-hero-banner.webp" alt="Cart Banner" loading="lazy">
+  </div>
+  <div class="page-hero-content">
+    <nav class="page-hero-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Cart</span></nav>
+    <h1 class="page-hero-title">Cart</h1>
+  </div>
+</div>
+
+<section style="padding: 4rem 0; background: #fff;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 350px; gap: 3rem; align-items: start;">
+    
+    <!-- Cart Table Area -->
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-family: var(--ff-sans); font-size: 0.9rem; margin-bottom: 2rem; min-width: 600px;">
+        <thead>
+          <tr style="border-bottom: 2px solid #eaeaea;">
+            <th style="padding: 1rem 0; font-weight: 700;">Product</th>
+            <th style="padding: 1rem 0; font-weight: 700;">Price</th>
+            <th style="padding: 1rem 0; font-weight: 700;">Quantity</th>
+            <th style="padding: 1rem 0; font-weight: 700;">Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Item 1 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_1.webp" alt="Classic Silver Dial Watch" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Classic Silver Dial Watch</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹4,999.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹4,999.00</td>
+          </tr>
+          <!-- Item 2 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_2.webp" alt="Black Chronograph Pro" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Black Chronograph Pro</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹6,999.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹6,999.00</td>
+          </tr>
+          <!-- Item 3 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_3.webp" alt="Automatic Skeleton Watch" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Automatic Skeleton Watch</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹12,499.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹12,499.00</td>
+          </tr>
+          <!-- Item 4 -->
+          <tr style="border-bottom: 1px solid #eaeaea;">
+            <td style="padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem;">
+              <button style="background:none;border:1px solid #ccc;border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.6rem;color:#888;"><i class="fa-solid fa-xmark"></i></button>
+              <img src="assets/images/shop_watch_4.webp" alt="Aurex Royal Gold Edition" style="width: 60px; height: 60px; object-fit: contain; background: #f8f8f8;">
+              <span style="font-weight: 600; font-size: 0.85rem; max-width: 120px;">Aurex Royal Gold Edition</span>
+            </td>
+            <td style="padding: 1.5rem 0; color: #666;">₹15,499.00</td>
+            <td style="padding: 1.5rem 0;">
+              <div style="display: flex; align-items: center; border: 1px solid #eaeaea; width: max-content;">
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">-</button>
+                <span style="padding: 0 0.5rem; font-weight: 600;">01</span>
+                <button style="padding: 0.5rem 0.8rem; background: transparent; border: none; cursor: pointer;">+</button>
+              </div>
+            </td>
+            <td style="padding: 1.5rem 0; font-weight: 700;">₹15,499.00</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- Action Buttons -->
+      <div style="display: flex; gap: 1rem;">
+        <button style="padding: 0.8rem 1.5rem; font-family: var(--ff-sans); font-weight: 600; border: 1px solid #111; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-rotate-right"></i> Update Cart</button>
+        <button style="padding: 0.8rem 1.5rem; font-family: var(--ff-sans); font-weight: 600; border: 1px solid #111; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-regular fa-trash-can"></i> Clear Cart</button>
+      </div>
+    </div>
+    
+    <!-- Order Summary Area -->
+    <div style="border: 1px solid #eaeaea; padding: 2rem; font-family: var(--ff-sans); font-size: 0.9rem;">
+      <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 2rem;">Order Summary</h3>
+      
+      <!-- Promo code -->
+      <div style="display: flex; border: 1px solid #eaeaea; margin-bottom: 2rem;">
+        <input type="text" placeholder="Add promo code" style="flex: 1; padding: 0.8rem; border: none; outline: none; background: transparent; font-size: 0.85rem;">
+        <button style="background: #111; color: #fff; border: none; padding: 0 1.5rem; font-weight: 600; cursor: pointer;">Apply</button>
+      </div>
+      
+      <!-- Subtotal -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid #eaeaea; font-weight: 600;">
+        <span>Subtotal</span>
+        <span>₹39,996.00</span>
+      </div>
+      
+      <!-- Shipment -->
+      <div style="padding: 1.5rem 0; border-bottom: 1px solid #eaeaea;">
+        <div style="font-weight: 600; margin-bottom: 1rem;">Shipment 1:</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; color: #666; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="shipment"> Local pickup:</label>
+          <span>₹150.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; color: #666; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="shipment" checked> Free shipping</label>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; color: #666; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="shipment"> Flat rate:</label>
+          <span>₹200.00</span>
+        </div>
+        <div style="color: #666; font-size: 0.85rem;">
+          Shipping to <strong>Dhaka</strong><br>
+          <a href="#" style="color: #111; text-decoration: underline; font-weight: 600; margin-top: 0.3rem; display: inline-block;">Change Address</a>
+        </div>
+      </div>
+      
+      <!-- Total -->
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; font-weight: 700; font-size: 1rem;">
+        <span>Total</span>
+        <span>₹39,996.00</span>
+      </div>
+      
+      <a href="checkout.html" style="display: block; width: 100%; text-align: center; background: #111; color: #fff; padding: 1rem; font-weight: 700; text-decoration: none;">Proceed To Checkout</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- You may be interested -->
+<section style="padding: 2rem 0 6rem; background: #fff;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <h2 style="font-family: var(--ff-sans); font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem;">You May be interested:</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem;">
+      <!-- Product 1 -->
+      <article class="new-shop-card">
+        <div class="simg-wrap">
+          <img src="assets/images/shop_watch_1.webp" alt="Classic Silver Dial Watch">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+        <div class="scat">Premium Watch</div>
+        <div class="sname">Classic Silver Dial Watch</div>
+        <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+        <div class="sprice">₹4,999.00</div>
+      </article>
+      <!-- Product 2 -->
+      <article class="new-shop-card">
+        <div class="simg-wrap">
+          <img src="assets/images/shop_watch_2.webp" alt="Black Chronograph Pro">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+        <div class="scat">Premium Watch</div>
+        <div class="sname">Black Chronograph Pro</div>
+        <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+        <div class="sprice">₹6,999.00</div>
+      </article>
+      <!-- Product 3 -->
+      <article class="new-shop-card">
+        <div class="simg-wrap">
+          <img src="assets/images/shop_watch_3.webp" alt="Automatic Skeleton Watch">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+        <div class="scat">Premium Watch</div>
+        <div class="sname">Automatic Skeleton Watch</div>
+        <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+        <div class="sprice">₹12,499.00</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Features Banner -->
+<section style="background: #fff; padding: 3rem 0; border-top: 1px solid #eaeaea; font-family: var(--ff-sans);">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Safe And Secure<br>Checkout</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-award" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Premium Quality<br>Guaranteed</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-rotate-left" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Easy 7 Days Return<br>Policy</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-truck-fast" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-size: 0.85rem; font-weight: 600; color: #111;">Enjoy fast and reliable<br>delivery</div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    @media (max-width: 992px) {
+      .section[style*="grid-template-columns: 1fr 350px"] {
+        grid-template-columns: 1fr !important;
+      }
+      .section[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (max-width: 576px) {
+      .section[style*="grid-template-columns: repeat(4, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+</section>
+<footer>
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo"><img src="assets/images/logo.webp" alt="Stackly Logo"></div>
+        <p class="footer-brand-desc">Swiss manufacture watchmaker since 1886. Each timepiece a testament to the eternal
+          pursuit of perfection in horology.</p>
+        <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Collection</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+                      <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Maison</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="blog.html">Journal</a></li>
+          <li><a href="404.html">404 page</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
         </ul>
       </div>
       <div>
