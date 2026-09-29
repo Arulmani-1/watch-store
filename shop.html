@@ -58,26 +58,420 @@
   </div>
 </div>
 
-<section>
-  <div class="section">
-    <div class="filter-bar" role="group" aria-label="Filter by collection">
-      <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
-      <button class="filter-btn" data-filter="classic" id="filter-classic">Classique</button>
-      <button class="filter-btn" data-filter="sports" id="filter-sports">Aqua Profonde</button>
-      <button class="filter-btn" data-filter="chrono" id="filter-chrono">Chrono Sport</button>
-      <button class="filter-btn" data-filter="tourbillon" id="filter-tourbillon">Tourbillon</button>
-    </div>
-    <div class="products-grid" id="products-grid" data-gsap="stagger">
-      <article class="product-card" data-category="classic"><div class="product-card-image"><img src="assets/images/collection-classic.webp" alt="Stackly Classique I — white enamel dress watch" loading="lazy" width="480" height="640"><span class="product-badge">Bestseller</span></div><div class="product-card-body"><p class="product-category">Classique</p><h3 class="product-name">Classique I</h3><p class="product-price">$12,400</p><button class="btn-add-to-cart" aria-label="Add Classique I to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="classic"><div class="product-card-image"><img src="assets/images/watch-movement-detail.webp" alt="Stackly Classique II — openwork skeleton movement dial" loading="lazy" width="600" height="600"></div><div class="product-card-body"><p class="product-category">Classique</p><h3 class="product-name">Classique II Squelette</h3><p class="product-price">$28,500</p><button class="btn-add-to-cart" aria-label="Add Classique II to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="sports"><div class="product-card-image"><img src="assets/images/collection-sports.webp" alt="Stackly Diver 300 — professional diver with blue dial" loading="lazy" width="480" height="640"><span class="product-badge">New</span></div><div class="product-card-body"><p class="product-category">Aqua Profonde</p><h3 class="product-name">Diver 300</h3><p class="product-price"><del>$18,600</del>$15,900</p><button class="btn-add-to-cart" aria-label="Add Diver 300 to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="chrono"><div class="product-card-image"><img src="assets/images/collection-chronograph.webp" alt="Stackly Tachymeter RS — rose gold racing chronograph" loading="lazy" width="480" height="640"></div><div class="product-card-body"><p class="product-category">Chrono Sport</p><h3 class="product-name">Tachymeter RS</h3><p class="product-price">$22,800</p><button class="btn-add-to-cart" aria-label="Add Tachymeter RS to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="tourbillon"><div class="product-card-image"><img src="assets/images/collection-tourbillon.webp" alt="Stackly Tourbillon Prestige T1 — platinum flying tourbillon" loading="lazy" width="480" height="640"><span class="product-badge">Limited</span></div><div class="product-card-body"><p class="product-category">Tourbillon</p><h3 class="product-name">Prestige T1</h3><p class="product-price">$148,000</p><button class="btn-add-to-cart" aria-label="Add Prestige T1 to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="classic"><div class="product-card-image"><img src="assets/images/luxury-watch-macro.webp" alt="Stackly Hommage — skeleton rose gold open heart watch" loading="lazy" width="600" height="600"></div><div class="product-card-body"><p class="product-category">Classique</p><h3 class="product-name">Hommage Skeleton</h3><p class="product-price">$45,200</p><button class="btn-add-to-cart" aria-label="Add Hommage to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="sports"><div class="product-card-image"><img src="assets/images/collection-sports.webp" alt="Stackly Diver 600 — titanium deep sea diver" loading="lazy" width="480" height="640"></div><div class="product-card-body"><p class="product-category">Aqua Profonde</p><h3 class="product-name">Diver 600 Titanium</h3><p class="product-price">$34,900</p><button class="btn-add-to-cart" aria-label="Add Diver 600 to cart">Add to Selection</button></div></article>
-      <article class="product-card" data-category="chrono"><div class="product-card-image"><img src="assets/images/collection-chronograph.webp" alt="Stackly Grand Complication — flyback chronograph with perpetual calendar" loading="lazy" width="480" height="640"><span class="product-badge">New</span></div><div class="product-card-body"><p class="product-category">Chrono Sport</p><h3 class="product-name">Grand Complication FC</h3><p class="product-price">$68,000</p><button class="btn-add-to-cart" aria-label="Add Grand Complication to cart">Add to Selection</button></div></article>
+<section style="background: #fff; padding: 4rem 0;">
+  <div class="section" style="max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 250px 1fr; gap: 3rem;">
+    <!-- Sidebar -->
+    <aside class="shop-sidebar" style="font-family: var(--ff-sans);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h3 style="font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-filter"></i> Filter By</h3>
+        <button style="background: none; border: none; font-size: 0.8rem; color: #888; cursor: pointer;">Clear All</button>
+      </div>
+
+      <!-- Brands -->
+      <div class="filter-group" style="margin-bottom: 2rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Brands <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Fastrack (566)</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Titan (450)</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Rolex (150)</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Tommy Hilfiger (476)</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Rado (358)</label>
+        </div>
+      </div>
+
+      <!-- Collection -->
+      <div class="filter-group" style="margin-bottom: 2rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Collection <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Automatic</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Black & Gold</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Classic</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Fast fit</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Blues</label>
+        </div>
+      </div>
+
+      <!-- Color -->
+      <div class="filter-group" style="margin-bottom: 2rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Color <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Beige</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Champagne</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Multi-Color/Other</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Orange</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Purple</label>
+        </div>
+      </div>
+
+      <!-- Strap -->
+      <div class="filter-group">
+        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">Strap <i class="fa-solid fa-chevron-up" style="font-size: 0.7rem;"></i></h4>
+        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.85rem; color: #555;">
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Bracelet</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> High-tech ceramic</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Brown Leather</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> Stainless steel</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem;"><input type="checkbox"> leather</label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="shop-main">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; font-family: var(--ff-sans); font-size: 0.85rem;">
+        <div style="font-weight: 600; font-size: 0.9rem;">Showing all results</div>
+        <div style="display: flex; align-items: center; gap: 1rem; color: #888;">
+          1 / 6 / 11 / 15 
+          <select style="padding: 0.5rem; border: 1px solid #ccc; background: transparent; font-size: 0.85rem; outline: none; cursor: pointer;">
+            <option>Default Sorting</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="new-shop-grid">
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_1.webp" alt="Classic Silver Dial Watch">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Premium Watch</div>
+          <div class="sname">Classic Silver Dial Watch</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹4,999.00</div>
+        </article>
+        
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_2.webp" alt="Black Chronograph Pro">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Premium Watch</div>
+          <div class="sname">Black Chronograph Pro</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹6,999.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_3.webp" alt="Automatic Skeleton Watch">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Premium Watch</div>
+          <div class="sname">Automatic Skeleton Watch</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹12,499.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_4.webp" alt="Aurex Royal Gold Edition">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Luxury Watch</div>
+          <div class="sname">Aurex Royal Gold Edition</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹15,499.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_5.webp" alt="Titan Smartwatch Pro">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Sports Watch</div>
+          <div class="sname">Titan Smartwatch Pro</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹6,000.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_6.webp" alt="ChronoX Ultra Smart">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Smartwatch</div>
+          <div class="sname">ChronoX Ultra Smart</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹5,999.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_7.webp" alt="Urban Classic Black">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Casual Watch</div>
+          <div class="sname">Urban Classic Black</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹2,999.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_8.webp" alt="Luxora Diamond Edge">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Luxury Watch</div>
+          <div class="sname">Luxora Diamond Edge</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹8,499.00</div>
+        </article>
+
+        <article class="new-shop-card">
+          <div class="simg-wrap">
+          <img src="assets/images/shop_watch_9.webp" alt="Galaxy Active Fit">
+          <div class="hover-actions">
+            <button aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+            <button aria-label="Quick View"><i class="fa-regular fa-eye"></i></button>
+            <button aria-label="Add to Cart"><i class="fa-solid fa-bag-shopping"></i></button>
+            <button aria-label="Compare"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button aria-label="Buy Now"><i class="fa-regular fa-credit-card"></i></button>
+          </div>
+        </div>
+          <div class="scat">Smartwatch</div>
+          <div class="sname">Galaxy Active Fit</div>
+          <div class="sstars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span style="color:#888;font-size:0.75rem;">(4.9)</span></div>
+          <div class="sprice">₹2,499.00</div>
+        </article>
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <button style="padding: 0.8rem 2rem; background: transparent; border: 1px solid #000; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.3s, color 0.3s;" onmouseover="this.style.background='#000'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='#000';">Load More <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.8rem;"></i></button>
+      </div>
     </div>
   </div>
+  
+  <style>
+    .new-shop-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .new-shop-card {
+      border: 1px solid #eaeaea;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      font-family: var(--ff-sans);
+      background: #fff;
+    }
+    .new-shop-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transform: translateY(-5px);
+    }
+    .new-shop-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .new-shop-card .scat {
+      font-size: 0.75rem;
+      color: #999;
+      margin-bottom: 0.5rem;
+    }
+    .new-shop-card .sname {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+    .new-shop-card .sstars {
+      color: #d4af37;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .new-shop-card .sprice {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 1024px) {
+      .new-shop-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .section { grid-template-columns: 1fr !important; }
+      .shop-sidebar { display: none; }
+    }
+    .shop-sidebar input[type="checkbox"] {
+      width: 14px; height: 14px;
+      border: 1px solid #ccc;
+      appearance: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+      border-radius: 2px;
+      position: relative;
+    }
+    .shop-sidebar input[type="checkbox"]:checked {
+      background-color: #222;
+      border-color: #222;
+    }
+  
+    .simg-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .simg-wrap img {
+      margin-bottom: 0 !important;
+      transition: transform 0.3s;
+    }
+    .new-shop-card:hover .simg-wrap img {
+      transform: scale(1.05);
+    }
+    .hover-actions {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      right: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      transition: bottom 0.3s ease;
+    }
+    .new-shop-card:hover .hover-actions {
+      bottom: 0;
+    }
+    .hover-actions button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.3s, transform 0.2s;
+    }
+    .hover-actions button:hover {
+      color: var(--clr-gold, #c3b091);
+      transform: scale(1.1);
+    }
+
+  </style>
+</section>
+
+<!-- Features Banner -->
+<section style="background: #fff; padding: 4rem 0; border-top: 1px solid #eaeaea; margin-bottom: 4rem;">
+  <div class="section" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Safe And Secure<br>Checkout</div>
+      </div>
+      <div style="width: 1px; background: #eaeaea; height: 40px;" class="hide-mobile"></div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-award" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Premium Quality<br>Guaranteed</div>
+      </div>
+      <div style="width: 1px; background: #eaeaea; height: 40px;" class="hide-mobile"></div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-arrow-rotate-left" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Easy 7 Days Return<br>Policy</div>
+      </div>
+      <div style="width: 1px; background: #eaeaea; height: 40px;" class="hide-mobile"></div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <i class="fa-solid fa-truck-fast" style="font-size: 2rem; color: var(--clr-gold);"></i>
+        <div style="font-family: var(--ff-sans); font-size: 0.9rem; font-weight: 600;">Enjoy fast and reliable<br>delivery</div>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media (max-width: 768px) {
+      .hide-mobile { display: none; }
+    }
+  
+    .simg-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .simg-wrap img {
+      margin-bottom: 0 !important;
+      transition: transform 0.3s;
+    }
+    .new-shop-card:hover .simg-wrap img {
+      transform: scale(1.05);
+    }
+    .hover-actions {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      right: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      transition: bottom 0.3s ease;
+    }
+    .new-shop-card:hover .hover-actions {
+      bottom: 0;
+    }
+    .hover-actions button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.3s, transform 0.2s;
+    }
+    .hover-actions button:hover {
+      color: var(--clr-gold, #c3b091);
+      transform: scale(1.1);
+    }
+
+  </style>
 </section>
 
 <div class="newsletter-banner" data-aos="fade-up">
