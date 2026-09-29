@@ -48,7 +48,14 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Service</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="shop.html">Shop</a></li>
+                    <li class="dropdown">
+        <a href="#" class="dropdown-toggle active">Pages <i class="fa-solid fa-chevron-down" style="font-size:0.8em;margin-left:4px;"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
 
@@ -68,11 +75,18 @@
   <!-- Mobile Nav -->
   <div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <nav class="mobile-nav-links">
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html" class="active" >Home</a>
       <a href="about.html">About Us</a>
       <a href="services.html">Service</a>
       <a href="blog.html">Blog</a>
-      <a href="shop.html">Shop</a>
+          <div class="mobile-dropdown">
+      <div class="mobile-dropdown-toggle" onclick="this.parentElement.classList.toggle('open')">Pages <i class="fa-solid fa-chevron-down"></i></div>
+      <div class="mobile-dropdown-menu">
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </div>
       <a href="contact.html">Contact</a>
       <a href="login.html">Login</a>
       <a href="signup.html">Sign Up</a>
@@ -513,11 +527,18 @@
       <div>
         <h3 class="footer-col-title">Collection</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="blog.html">Blog</a></li>
+                      <li class="dropdown">
+        <a href="#" class="dropdown-toggle active">Pages <i class="fa-solid fa-chevron-down" style="font-size:0.8em;margin-left:4px;"></i></a>
+        <ul class="dropdown-menu">
           <li><a href="shop.html">Shop</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
