@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
   };
   requestAnimationFrame(raf);
 
-  document.querySelectorAll('a, button, [role="button"], .collection-card, .product-card, .blog-card, .dashboard-card, .welcome-card').forEach(el => {
+  document.querySelectorAll('a, button, [role="button"], .collection-card, .product-card, .blog-card, .dashboard-card, .welcome-card, .wishlist-card').forEach(el => {
     el.addEventListener('mouseenter', () => outline.classList.add('hovering'));
     el.addEventListener('mouseleave', () => outline.classList.remove('hovering'));
   });
