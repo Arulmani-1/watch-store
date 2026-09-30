@@ -14,7 +14,10 @@
 <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
 <div id="toast" role="status" aria-live="polite"></div>
 <main class="auth-wrapper" id="main-content">
-  <div class="auth-image-side" style="position: relative;">
+  <div class="auth-image-side" style="position: relative; overflow: hidden;">
+    <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+      <source src="assets/videos/watch.mp4" type="video/mp4">
+    </video>
     <a href="index.html" class="btn-text" style="position: absolute; top: clamp(1.5rem, 4vw, 3rem); left: clamp(1.5rem, 4vw, 3rem); z-index: 10; color: var(--clr-gold); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   </div>
   <div class="auth-form-side" style="position: relative;">
