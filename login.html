@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .mobile-back-btn { display: none; position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 10; color: var(--clr-gold); text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+    @media (max-width: 991px) {
+      .mobile-back-btn { display: flex; }
+      .auth-image-side .btn-text { display: none; }
+    }
+  </style>
 </head>
 <body>
 <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-outline" aria-hidden="true"></div>
@@ -21,6 +28,7 @@
     <a href="index.html" class="btn-text" style="position: absolute; top: clamp(1.5rem, 4vw, 3rem); left: clamp(1.5rem, 4vw, 3rem); z-index: 10; color: var(--clr-gold); text-shadow: 0 2px 4px rgba(0,0,0,0.5);"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   </div>
   <div class="auth-form-side" style="position: relative;">
+    <a href="index.html" class="btn-text mobile-back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   <div class="auth-card" data-aos="scale-in">
     <div class="auth-logo"><img src="assets/images/logo.webp" alt="Stackly Logo"></div>
     <h1 class="auth-title">Welcome back</h1>
