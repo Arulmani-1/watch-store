@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
   };
   requestAnimationFrame(raf);
 
-  document.querySelectorAll('a, button, [role="button"], .collection-card, .product-card, .blog-card, .dashboard-card, .welcome-card, .wishlist-card').forEach(el => {
+  document.querySelectorAll('a, button, [role="button"], input, textarea, select, label, .collection-card, .product-card, .blog-card, .blog-new-card, .dashboard-card, .welcome-card, .wishlist-card, .btn, .special-collection-item, .hot-deal-card, .dropdown-toggle, .recent-article').forEach(el => {
     el.addEventListener('mouseenter', () => outline.classList.add('hovering'));
     el.addEventListener('mouseleave', () => outline.classList.remove('hovering'));
   });
