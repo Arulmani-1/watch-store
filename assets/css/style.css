@@ -450,7 +450,7 @@ select {
 
 .mobile-nav-links a {
   font-family: var(--ff-display);
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   letter-spacing: 0.1em;
   color: var(--clr-white);
   transition: color var(--tr);
@@ -556,7 +556,7 @@ select {
   margin-bottom: 1.5rem;
 }
 
-.hero-title em {
+.hero-title em, .page-hero-title em, .auth-title em {
   font-style: italic;
   color: var(--clr-gold);
 }
@@ -1856,8 +1856,8 @@ footer {
    RESPONSIVE BREAKPOINTS
    ======================== */
 
-/* Tablet: 576–991px */
-@media (max-width: 991px) {
+/* Tablet: 576–1199px */
+@media (max-width: 1199px) {
   .hamburger {
     display: flex;
   }
@@ -2023,7 +2023,7 @@ footer {
 }
 
 /* Hide login/signup in mobile (hamburger handles it) */
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   #nav-login-btn, #nav-signup-btn { display: none; }
 }
 /* Footer Styles */
@@ -2125,7 +2125,7 @@ footer {
 }
 .mobile-dropdown-toggle {
   font-family: var(--ff-display);
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
   letter-spacing: 0.1em;
   color: var(--clr-white);
   padding: 0.25rem 0;
