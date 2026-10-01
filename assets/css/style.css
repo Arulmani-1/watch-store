@@ -2062,18 +2062,19 @@ footer {
 }
 
 .footer-newsletter-form .btn-subscribe {
-  background-color: #2D68FF;
-  color: #fff;
+  background-color: var(--clr-gold, #c3b091);
+  color: #000;
   border: none;
   border-radius: 50px;
   padding: 0.6rem 1.2rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .footer-newsletter-form .btn-subscribe:hover {
-  background-color: #1a51da;
+  background-color: #e0cca7;
+  transform: scale(1.05);
 }
 
 
