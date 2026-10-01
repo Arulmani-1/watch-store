@@ -26,7 +26,7 @@
       <li><a href="services.html">Service</a></li>
       <li><a href="blog.html">Blog</a></li>
                   <li class="dropdown">
-        <a href="#" class="dropdown-toggle active">Pages <i class="fa-solid fa-chevron-down" style="font-size:0.8em;margin-left:4px;"></i></a>
+        <a href="#" class="dropdown-toggle">Pages <i class="fa-solid fa-chevron-down" style="font-size:0.8em;margin-left:4px;"></i></a>
         <ul class="dropdown-menu">
           <li><a href="shop.html">Shop</a></li>
           <li><a href="cart.html">Cart</a></li>
@@ -291,6 +291,11 @@
       display: grid;
       grid-template-columns: 1fr 400px;
       gap: 4rem;
+      align-items: start;
+    }
+    .checkout-right {
+      position: sticky;
+      top: 120px; /* Offset for navbar */
     }
     .checkout-login-prompt, .checkout-coupon-prompt {
       border: 1px dashed #ccc;
