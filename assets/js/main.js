@@ -604,19 +604,31 @@ const targetPhrases = [
   'shop now',
   'reply',
   'forgot password',
-  'continue with google'
+  'continue with google',
+  'filter',
+  'view invoice',
+  'details',
+  'upload photo',
+  'save changes',
+  'update address',
+  'notify me',
+  'clear wishlist',
+  'enable',
+  'delete account',
+  'previous',
+  'next'
 ];
 
 document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-container').forEach(el => {
-  const text = el.textContent.toLowerCase();
-  let matches = targetPhrases.some(phrase => text.includes(phrase.toLowerCase()));
+  const text = el.textContent.toLowerCase().trim();
+  let matches = targetPhrases.some(phrase => text === phrase || text.includes(phrase.toLowerCase()));
   
   if (!matches && el.hasAttribute('aria-label')) {
     const ariaLabel = el.getAttribute('aria-label').toLowerCase();
     matches = targetPhrases.some(phrase => ariaLabel.includes(phrase.toLowerCase()));
   }
   
-  if (!matches && el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container')) {
+  if (!matches && (el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container') || el.querySelector('.fa-heart'))) {
     matches = true;
   }
   
@@ -657,8 +669,8 @@ document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-con
   }
 });
 
-// Form Submission Redirect (Newsletter, Comment, Search)
-document.querySelectorAll('.footer-newsletter-form, .newsletter-form, .comment-form, .blog-search').forEach(form => {
+// Form Submission Redirect (Newsletter, Comment, Search, Forms)
+document.querySelectorAll('.footer-newsletter-form, .newsletter-form, .comment-form, .blog-search, .update-password-form').forEach(form => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     
