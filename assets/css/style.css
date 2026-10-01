@@ -1474,10 +1474,8 @@ textarea.form-control {
 
 /* Newsletter */
 .newsletter-banner {
-  background: linear-gradient(135deg, var(--clr-surface) 0%, var(--clr-surface-2) 100%);
-  border-top: 1px solid var(--clr-border);
-  border-bottom: 1px solid var(--clr-border);
-  padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+  background: #111219;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
   text-align: center;
 }
 
@@ -1487,19 +1485,19 @@ textarea.form-control {
   gap: 0.75rem;
   justify-content: center;
   max-width: 500px;
-  margin: 1.5rem auto 0;
+  margin: 2.5rem auto 0;
 }
 
 .newsletter-form input {
   flex: 1;
   min-width: 220px;
-  padding: 0.85rem 1rem;
-  background: var(--clr-bg);
-  border: 1px solid var(--clr-border);
+  padding: 0.85rem 1.2rem;
+  background: #06070a;
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 2px;
   color: var(--clr-white);
   font-size: 0.9rem;
-  min-height: 48px;
+  min-height: 52px;
 }
 
 .newsletter-form input::placeholder {
@@ -1508,7 +1506,26 @@ textarea.form-control {
 
 .newsletter-form input:focus {
   outline: none;
-  border-color: var(--clr-gold);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.newsletter-form button {
+  background: #d0aa53;
+  color: #111;
+  border: none;
+  border-radius: 2px;
+  padding: 0 2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  min-height: 52px;
+  transition: opacity 0.3s;
+}
+
+.newsletter-form button:hover {
+  opacity: 0.85;
 }
 
 /* Footer */
