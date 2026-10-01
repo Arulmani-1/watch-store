@@ -550,3 +550,76 @@ window.showToast = showToast;
   document.addEventListener('mobile-nav-open',  () => lenis.stop());
   document.addEventListener('mobile-nav-close', () => lenis.start());
 })();
+
+// Update footer social links to point to 404.html
+// Update footer social links to point to 404.html
+document.querySelectorAll('.footer-social a').forEach(a => {
+  a.setAttribute('href', '404.html');
+});
+
+// Number Counter Animation for hero stats
+const statNumbers = document.querySelectorAll('.hero-stat-num');
+statNumbers.forEach(stat => {
+  const target = parseInt(stat.innerText.trim());
+  if(!isNaN(target)) {
+    stat.innerText = '0';
+    gsap.to(stat, {
+      innerText: target,
+      duration: 2.5,
+      snap: { innerText: 1 },
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: stat,
+        start: "top 95%",
+      }
+    });
+  }
+});
+
+// Redirect specific buttons/links to 404 page based on user request
+const targetPhrases = [
+  'explore collection',
+  'our story',
+  'discover',
+  'learn about our craft',
+  'book a visit',
+  'add to selection',
+  'view full collection',
+  'read more'
+];
+
+document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost').forEach(el => {
+  const text = el.textContent.toLowerCase();
+  const matches = targetPhrases.some(phrase => text.includes(phrase.toLowerCase()));
+  
+  if (matches) {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Show loading animation overlay with logo and loading bar
+      const loader = document.createElement('div');
+      loader.id = 'global-redirect-loader';
+      loader.innerHTML = '<div style="display: flex; flex-direction: column; align-items: center; gap: 30px;"><img src="assets/images/logo.webp" alt="Stackly Logo" style="height: 50px;"><div style="width: 180px; height: 2px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;"><div style="width: 100%; height: 100%; background: var(--clr-gold, #c3b091); animation: loadingBarProgress 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards; transform-origin: left; transform: scaleX(0);"></div></div></div><style>@keyframes loadingBarProgress { 0% { transform: scaleX(0); } 50% { transform: scaleX(0.7); } 100% { transform: scaleX(1); } }</style>';
+      loader.style.cssText = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #0b0c10; z-index: 999999; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;';
+      document.body.appendChild(loader);
+      
+      // Trigger fade in
+      requestAnimationFrame(() => {
+        loader.style.opacity = '1';
+      });
+      
+      // Redirect after 1.5s
+      setTimeout(() => {
+        window.location.href = '404.html';
+      }, 1500);
+    });
+  }
+});
+
+// Remove loading screen when navigating back (bfcache)
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted) {
+    const loader = document.getElementById('global-redirect-loader');
+    if (loader) loader.remove();
+  }
+});
