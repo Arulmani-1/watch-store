@@ -2172,3 +2172,10 @@ footer {
 .mobile-dropdown-menu a.active {
   color: var(--clr-gold);
 }
+
+ . a n a l y t i c s - c a r d : h o v e r   { 
+     t r a n s f o r m :   t r a n s l a t e Y ( - 5 p x ) ; 
+     b a c k g r o u n d :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 0 8 )   ! i m p o r t a n t ; 
+     b o r d e r - c o l o r :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 1 5 )   ! i m p o r t a n t ; 
+ }  
+ 

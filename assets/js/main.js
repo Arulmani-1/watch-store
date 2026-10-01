@@ -616,11 +616,21 @@ const targetPhrases = [
   'enable',
   'delete account',
   'previous',
-  'next'
+  'next',
+  'search',
+  'save',
+  'sign out of all other devices',
+  'export csv',
+  'add customer',
+  'view profile',
+  'save settings',
+  'clear application cache',
+  'backup database now',
+  'view all logs'
 ];
 
-document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-container').forEach(el => {
-  const text = el.textContent.toLowerCase().trim();
+document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-container, .admin-pagination span').forEach(el => {
+  const text = el.textContent.toLowerCase().replace(/\s+/g, ' ').trim();
   let matches = targetPhrases.some(phrase => text === phrase || text.includes(phrase.toLowerCase()));
   
   if (!matches && el.hasAttribute('aria-label')) {
@@ -628,7 +638,7 @@ document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-con
     matches = targetPhrases.some(phrase => ariaLabel.includes(phrase.toLowerCase()));
   }
   
-  if (!matches && (el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container') || el.querySelector('.fa-heart'))) {
+  if (!matches && (el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container, .admin-pagination') || el.querySelector('.fa-heart'))) {
     matches = true;
   }
   

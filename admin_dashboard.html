@@ -460,7 +460,7 @@
           <div
             style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; color: var(--clr-silver); font-size: 0.9rem;">
             <span>Showing 1 to 3 of 14 orders</span>
-            <div style="display: flex; gap: 0.5rem;">
+            <div class="admin-pagination" style="display: flex; gap: 0.5rem;">
               <button
                 style="background: rgba(255,255,255,0.1); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #fff; cursor: not-allowed; opacity: 0.5;">Previous</button>
               <button
@@ -659,7 +659,7 @@
           <div
             style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; color: var(--clr-silver); font-size: 0.9rem;">
             <span>Showing 1 to 3 of 8,492 customers</span>
-            <div style="display: flex; gap: 0.5rem;">
+            <div class="admin-pagination" style="display: flex; gap: 0.5rem;">
               <button
                 style="background: rgba(255,255,255,0.1); border: none; padding: 0.4rem 0.8rem; border-radius: 4px; color: #fff; cursor: not-allowed; opacity: 0.5;">Previous</button>
               <button
@@ -676,26 +676,34 @@
         </section>
 
         <section id="sec-analytics" class="tab-section" style="display: none;">
+          <style>
+            .analytics-card:hover {
+              transform: translateY(-5px);
+              background: rgba(255, 255, 255, 0.08) !important;
+              border-color: rgba(255, 255, 255, 0.15) !important;
+            }
+          </style>
           <h3 style="color: var(--clr-gold); margin-top:0; margin-bottom: 2rem;">Sales & Traffic Analytics</h3>
+
 
           <div
             style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-            <div
-              style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+            <div class="analytics-card"
+              style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, background 0.3s ease;">
               <p style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Monthly Revenue</p>
               <h3 style="font-size: 2rem; margin:0; color: #fff;">$245,000</h3>
               <p style="margin: 0.5rem 0 0 0; color: #2ecc71; font-size: 0.85rem;"><i
                   class="fa-solid fa-arrow-trend-up"></i> +12% from last month</p>
             </div>
-            <div
-              style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+            <div class="analytics-card"
+              style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, background 0.3s ease;">
               <p style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Conversion Rate</p>
               <h3 style="font-size: 2rem; margin:0; color: #fff;">4.2%</h3>
               <p style="margin: 0.5rem 0 0 0; color: #2ecc71; font-size: 0.85rem;"><i
                   class="fa-solid fa-arrow-trend-up"></i> +0.5% from last month</p>
             </div>
-            <div
-              style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+            <div class="analytics-card"
+              style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s ease, background 0.3s ease;">
               <p style="margin:0 0 0.5rem 0; color: var(--clr-silver);">Site Visitors</p>
               <h3 style="font-size: 2rem; margin:0; color: #fff;">84,200</h3>
               <p style="margin: 0.5rem 0 0 0; color: #e74c3c; font-size: 0.85rem;"><i
