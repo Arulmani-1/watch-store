@@ -638,7 +638,7 @@ document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-con
     matches = targetPhrases.some(phrase => ariaLabel.includes(phrase.toLowerCase()));
   }
   
-  if (!matches && (el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container, .admin-pagination') || el.querySelector('.fa-heart'))) {
+  if (!matches && (el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container, .admin-pagination') || (el.querySelector('.fa-heart') && !el.closest('li')))) {
     matches = true;
   }
   
