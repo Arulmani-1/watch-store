@@ -585,12 +585,39 @@ const targetPhrases = [
   'book a visit',
   'add to selection',
   'view full collection',
-  'read more'
+  'read more',
+  'visit the atelier',
+  'movement services',
+  'find your perfect match today',
+  'book service',
+  'schedule a service',
+  'explore now',
+  'clear all',
+  'load more',
+  'add to cart',
+  'update cart',
+  'clear cart',
+  'apply',
+  'proceed to checkout',
+  'login',
+  'place order',
+  'apply coupon',
+  'shop now',
+  'reply'
 ];
 
-document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost').forEach(el => {
+document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost, .video-container').forEach(el => {
   const text = el.textContent.toLowerCase();
-  const matches = targetPhrases.some(phrase => text.includes(phrase.toLowerCase()));
+  let matches = targetPhrases.some(phrase => text.includes(phrase.toLowerCase()));
+  
+  if (!matches && el.hasAttribute('aria-label')) {
+    const ariaLabel = el.getAttribute('aria-label').toLowerCase();
+    matches = targetPhrases.some(phrase => ariaLabel.includes(phrase.toLowerCase()));
+  }
+  
+  if (!matches && el.closest('.hover-actions, .blog-category-list, .blog-tag-cloud, .blog-recent-post, .blog-socials, .blog-pagination, .video-container')) {
+    matches = true;
+  }
   
   if (matches) {
     el.addEventListener('click', (e) => {
@@ -616,8 +643,8 @@ document.querySelectorAll('a, button, .btn, .btn-primary, .btn-ghost').forEach(e
   }
 });
 
-// Newsletter Form Submission Redirect
-document.querySelectorAll('.footer-newsletter-form, .newsletter-form').forEach(form => {
+// Form Submission Redirect (Newsletter, Comment, Search)
+document.querySelectorAll('.footer-newsletter-form, .newsletter-form, .comment-form, .blog-search').forEach(form => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     

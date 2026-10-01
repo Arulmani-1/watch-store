@@ -333,10 +333,10 @@
 
         <div class="blog-sidebar-widget">
           <h3 class="blog-sidebar-title">Search</h3>
-          <div class="blog-search">
-            <input type="text" placeholder="Search articles...">
-            <button><i class="fa-solid fa-search"></i></button>
-          </div>
+          <form class="blog-search">
+            <input type="text" placeholder="Search articles..." required>
+            <button type="submit"><i class="fa-solid fa-search"></i></button>
+          </form>
         </div>
 
         <div class="blog-sidebar-widget">
@@ -458,7 +458,7 @@
       <!-- Leave a comment form -->
       <div style="background: #f9f9f9; padding: 2rem; border-radius: 4px;">
         <h4 style="margin-top: 0; margin-bottom: 1.5rem; font-size: 1.2rem;">Leave a Comment</h4>
-        <form>
+        <form class="comment-form">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
             <input type="text" placeholder="Name *" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; outline: none; font-family: var(--ff-sans);" required>
             <input type="email" placeholder="Email *" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; outline: none; font-family: var(--ff-sans);" required>
