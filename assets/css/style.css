@@ -42,7 +42,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior removed for lenis */
   overflow-x: clip;
 }
 
@@ -56,6 +56,7 @@ body {
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
+
 /* Custom Scrollbar */
 html {
   scrollbar-width: thin;
@@ -157,7 +158,7 @@ select {
 
 /* Scrollbar - Hidden */
 ::-webkit-scrollbar {
-  display: none;
+  /* removed display block */
 }
 
 /* Page Loader */
@@ -502,9 +503,11 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5; /* Premium dark aesthetic */
+  opacity: 0.5;
+  /* Premium dark aesthetic */
   pointer-events: none;
-  transform: scale(1.35); /* Increased zoom to fully crop out the watermark */
+  transform: scale(1.35);
+  /* Increased zoom to fully crop out the watermark */
 }
 
 .hero-bg::after {
@@ -556,7 +559,9 @@ select {
   margin-bottom: 1.5rem;
 }
 
-.hero-title em, .page-hero-title em, .auth-title em {
+.hero-title em,
+.page-hero-title em,
+.auth-title em {
   font-style: italic;
   color: var(--clr-gold);
 }
@@ -1297,7 +1302,7 @@ textarea.form-control {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .auth-image-side {
     display: block;
     background-image: url('../images/watch-movement-detail.webp');
@@ -1307,7 +1312,7 @@ textarea.form-control {
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
-  
+
   .auth-image-side::after {
     content: '';
     position: absolute;
@@ -1493,7 +1498,7 @@ textarea.form-control {
   min-width: 220px;
   padding: 0.85rem 1.2rem;
   background: #06070a;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 2px;
   color: var(--clr-white);
   font-size: 0.9rem;
@@ -2017,6 +2022,7 @@ footer {
   transition: color var(--tr), border-color var(--tr), background var(--tr);
   white-space: nowrap;
 }
+
 .nav-login:hover {
   color: var(--clr-gold);
   border-color: var(--clr-gold);
@@ -2034,6 +2040,7 @@ footer {
   transition: background var(--tr), box-shadow var(--tr);
   white-space: nowrap;
 }
+
 .nav-signup:hover {
   background: var(--clr-gold-light);
   box-shadow: var(--shadow-gold);
@@ -2041,12 +2048,18 @@ footer {
 
 /* Hide login/signup in mobile (hamburger handles it) */
 @media (max-width: 1199px) {
-  #nav-login-btn, #nav-signup-btn { display: none; }
+
+  #nav-login-btn,
+  #nav-signup-btn {
+    display: none;
+  }
 }
+
 /* Footer Styles */
 .footer-col-title {
   color: var(--clr-gold) !important;
 }
+
 /* Footer Newsletter */
 .footer-newsletter-desc {
   color: var(--clr-silver);
@@ -2099,6 +2112,7 @@ footer {
 .nav-links .dropdown {
   position: relative;
 }
+
 .nav-links .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -2106,7 +2120,7 @@ footer {
   background: var(--clr-bg);
   min-width: 150px;
   border: 1px solid var(--clr-border);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -2116,21 +2130,25 @@ footer {
   z-index: 100;
   padding: 0.5rem 0;
 }
+
 .nav-links .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
+
 .nav-links .dropdown-menu li {
   list-style: none;
 }
+
 .nav-links .dropdown-menu a {
   padding: 0.5rem 1.5rem;
   display: block;
   font-size: 0.9rem;
 }
+
 .nav-links .dropdown-menu a:hover {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--clr-gold);
 }
 
@@ -2141,6 +2159,7 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
 .mobile-dropdown-toggle {
   font-family: var(--ff-display);
   font-size: clamp(1.2rem, 3vw, 1.6rem);
@@ -2150,10 +2169,12 @@ footer {
   cursor: pointer;
   transition: color var(--tr);
 }
+
 .mobile-dropdown-toggle:hover,
 .mobile-dropdown-toggle.active {
   color: var(--clr-gold);
 }
+
 .mobile-dropdown-menu {
   display: none;
   flex-direction: column;
@@ -2161,21 +2182,17 @@ footer {
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
+
 .mobile-dropdown.open .mobile-dropdown-menu {
   display: flex;
 }
+
 .mobile-dropdown-menu a {
   font-size: 1.5rem;
   color: #bbb;
 }
+
 .mobile-dropdown-menu a:hover,
 .mobile-dropdown-menu a.active {
   color: var(--clr-gold);
 }
-
- . a n a l y t i c s - c a r d : h o v e r   { 
-     t r a n s f o r m :   t r a n s l a t e Y ( - 5 p x ) ; 
-     b a c k g r o u n d :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 0 8 )   ! i m p o r t a n t ; 
-     b o r d e r - c o l o r :   r g b a ( 2 5 5 ,   2 5 5 ,   2 5 5 ,   0 . 1 5 )   ! i m p o r t a n t ; 
- }  
- 

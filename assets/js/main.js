@@ -521,10 +521,11 @@ window.showToast = showToast;
   }
 
   const lenis = new Lenis({
-    lerp: 0.07,             // Premium, buttery smooth motion
+    lerp: 0.1,             // Premium, buttery smooth motion
     smoothWheel: true,
-    wheelMultiplier: 1.0,   // Natural scroll speed
-    touchMultiplier: 1.2,   // Slightly faster for touch
+    wheelMultiplier: 1.5,   // Faster scroll speed
+    touchMultiplier: 1.5,   // Faster for touch
+    syncTouch: true,
     infinite: false,
   });
 
